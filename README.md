@@ -19,16 +19,18 @@ Após finalizarmos o desenvolvimento da solução de NFT Solana dentro da CM vam
 ## Milestones
 **Milestone 1:**
 * Duration: [x months]
-* Deliverables: [what will be produced, accomplished, or demonstrated by the end of this period?]
-* Funds request (USD) for milestone 1: [$x USD]
-**Milestone 2:**
+* Deliverables: Solana NFT - Metaplex - Construiremos um DApp para demonstrar a criação de NFTs, venda primária e secundária, packs (pacote de NFTs) e leilão.
+* Funds request (USD) for milestone 1: [$x USD]  
+
+**Milestone 2:**  
 * Duration: [x months]
-* Deliverables: [what will be produced, accomplished, or demonstrated by the end of this period?]
-* Funds request (USD) for milestone 2: [$x USD]
-**Milestone 3:**
+* Deliverables: Métodos para gerar e exibir tanto metadados quanto imagens de NFT dentro da CM.
+* Funds request (USD) for milestone 2: [$x USD]  
+
+**Milestone 3:**  
 * Duration: [x months]
-* Deliverables: [what will be produced, accomplished, or demonstrated by the end of this period?]
-* Funds request (USD) for milestone 3: [$x USD]
+* Deliverables: Implementação de Exemplo [what will be produced, accomplished, or demonstrated by the end of this period?]
+* Funds request (USD) for milestone 3: [$x USD]  
 ## Total funds requested
 ### $[sum of funds requested for milestones 1, 2, and 3] USD
 Use of funds (specific breakdown):
