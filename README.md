@@ -10,11 +10,12 @@ Os desenvolvedores Solana podem utilizar essa solucao para expandir a sua base d
 ## How you will use Cartesi, specifically?
 [Details about how you're using Cartesi specifically, and why it makes sense. This is the most important part of the proposal. If you are not precise, or your intention is not feasible, the proposal will be rejected.]
 
-A CM abre um mundo de possibilidades para a criacao de DApps que vao desde jogos, DeFI, reconhecimento biom'etrico, IA e tantas outras coisas inimaginaveis.
-A CM sera usada como base para a cria'c~ao de produtos e servi'cos web3 para os clientes da Calindra.
+A CM abre um mundo de possibilidades para a criacao de DApps que vao desde jogos, DeFI, reconhecimento biométrico, IA e tantas outras coisas que ainda nem imaginamos.
+Uma visão mais concreta é utilizar a CM como base para a criação de produtos e serviços web3 para os atuais e futuros clientes da Calindra.
 
-Ap'os finalizarmos a solucao de NFT Solana para rodar dentro da CM, vamos criar um jogo de futebol manager que utiliza IA para gerar o perfil dos jogadores. As imagens serao criadas dentro da CM com uma rede previamente treinada utilizando GAN - Generative Adversarial Network.
 As NFTs atualmente possuem o seu metadado e imagem geradas e gravadas fora da web3 sem nenhum tipo de garantia ou vantagem oferecida por essa nova tecnologia, acretitamos que utilizando a CM vamos eliminar esse ponto de falha.
+
+Após finalizarmos a solução de NFT Solana para rodar dentro da CM, como implementação de exemplo e vitrine para a Calindra, tanto para atrair novos clientes como novos talentos, vamos criar um jogo de futebol manager que utiliza IA para gerar o perfil dos jogadores. Essas imagens serao criadas dentro da CM com uma rede previamente treinada utilizando GAN - Generative Adversarial Network.
 
 ## Milestones
 **Milestone 1:**
