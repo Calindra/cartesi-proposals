@@ -4,8 +4,8 @@
 **Project Description**
 [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
 **Value proposition**
-[Why would someone use this product/service? Or how does it add value to the Cartesi ecosystem or tech stack?]
-Os desenvolvedores Solana podem utilizar essa solucao para expandir a sua base de usuarios sem ter o custo de manter duas bases de codigo diferentes.
+[Why would someone use this product/service? Or how does it add value to the Cartesi ecosystem or tech stack?]  
+Os desenvolvedores Solana poderão utilizar a solucao para expandir a sua base de usuários sem necessariamente aumentar o custo de manter duas bases de código específicas para cada rede.
 
 ## How you will use Cartesi, specifically?
 [Details about how you're using Cartesi specifically, and why it makes sense. This is the most important part of the proposal. If you are not precise, or your intention is not feasible, the proposal will be rejected.]
