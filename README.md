@@ -24,7 +24,7 @@ Após finalizarmos o desenvolvimento da solução de NFT Solana dentro da CM vam
 
 **Milestone 2:**  
 * Duration: [x months]
-* Deliverables: Métodos para gerar e exibir tanto metadados quanto imagens de NFT dentro da CM.
+* Deliverables: Métodos para gerar e exibir tanto metadados quanto imagens de NFT dentro da CM. Vouchers para depositar e sacar NFTs via ERC-1155.
 * Funds request (USD) for milestone 2: [$x USD]  
 
 **Milestone 3:**  
