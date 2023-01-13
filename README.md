@@ -14,7 +14,7 @@ A CM abre um mundo de possibilidades para a criacao de DApps que vao desde jogos
 
 As NFTs atualmente possuem o seu metadado e imagem geradas e gravadas fora da web3 sem nenhum tipo de garantia ou vantagem oferecida por essa nova tecnologia, acretitamos que utilizando a CM vamos eliminar esse ponto de falha.
 
-Após finalizarmos o desenvolvimento da solução de NFT Solana dentro da CM vamos criar um DApp como implementação de exemplo que servirá de vitrine para a Calindra, tanto para atrair novos clientes como novos talentos para o nosso time. Esse DApp será um jogo de futebol manager que utiliza IA para gerar o perfil dos jogadores, essas imagens serão criadas dentro da CM através de uma rede neural GAN - Generative Adversarial Network - previamente treinada.
+Após finalizarmos o desenvolvimento da solução de NFT Solana dentro da CM vamos criar um DApp como implementação de exemplo que servirá de vitrine para a Calindra, tanto para atrair novos clientes como novos talentos para o nosso time. Esse DApp será um jogo de futebol manager que utiliza IA para gerar o perfil dos jogadores, essas imagens serão criadas dentro da CM através de uma rede neural GAN - Generative Adversarial Network - previamente treinada. A combinação de blockchain, AI e jogos será vencedora.
 
 ## Milestones
 **Milestone 1:**
