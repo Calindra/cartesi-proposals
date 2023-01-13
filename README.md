@@ -10,7 +10,7 @@ Os desenvolvedores Solana poderão utilizar a solucao para expandir a sua base d
 ## How you will use Cartesi, specifically?
 [Details about how you're using Cartesi specifically, and why it makes sense. This is the most important part of the proposal. If you are not precise, or your intention is not feasible, the proposal will be rejected.]
 
-A CM abre um mundo de possibilidades para a criacao de DApps que vao desde jogos, DeFI, reconhecimento biométrico, IA e tantas outras coisas que ainda nem imaginamos. Para sair do imaginário e ter uma visão mais concreta, o nosso objetivo é utilizar a CM como base para a criação de produtos e serviços web3 para os atuais e futuros clientes da Calindra.
+A CM abre um mundo de possibilidades para a criacao de DApps que vao desde jogos, DeFI, reconhecimento biométrico, IA e tantas outras coisas que ainda nem imaginamos, mas para sair do imaginário e ter uma visão mais concreta, o nosso objetivo é utilizar a CM como base para a criação de produtos e serviços web3 para os atuais e futuros clientes da Calindra.
 
 As NFTs atualmente possuem o seu metadado e imagem geradas e gravadas fora da web3 sem nenhum tipo de garantia ou vantagem oferecida por essa nova tecnologia, acretitamos que utilizando a CM vamos eliminar esse ponto de falha.
 
