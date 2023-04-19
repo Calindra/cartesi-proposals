@@ -37,6 +37,8 @@ Some examples of the types of games that can be built with this framework are:
 - A decentralized card game that uses Cartesi’s off-chain computation to handle encryption algorithms and game logic to randomize the deck.
 - RPG games that use PRNGs to determine loot drops, enemy spawns, critical hits, etc. 
 
+### Simple PRNG
+
 ### Hashed Turn Based Seed for PRNG
 
 ```mermaid
@@ -95,19 +97,21 @@ sequenceDiagram
 
 * Duration: 1 months
 
-* Deliverables: 
+* Deliverables: A simple method to generate random numbers
+<!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
+-->
 
-* Funds request (USD) for milestone 1: [$x USD]
+* Funds request (USD) for milestone 1: $5,000 USD
 
 **Milestone 2: Hashed Turn Based Seed for PRNG**
 
-* Duration: 1 months
+* Duration: 1 month
 
-* Deliverables: 
+* Deliverables: Frontend framework and ConvenienceSmartContract
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 2: [$x USD]
+* Funds request (USD) for milestone 2: $7,000 USD
 
 **Milestone 3: Chainlink VRF**
 
@@ -116,12 +120,13 @@ sequenceDiagram
 * Deliverables: 
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 3: [$x USD]
+* Funds request (USD) for Chainlink VRF: $9,000 USD
 
 ## Total funds requested
 
-### $[sum of funds requested for milestones 1, 2, and 3] USD
+### $21,000 USD
 
+<!--
 Use of funds (specific breakdown):
 
 * [List item: price in usd]
@@ -130,22 +135,22 @@ Use of funds (specific breakdown):
 * [List item: price in usd]
 * [List item: price in usd]
 * [List item: price in usd]
-
+-->
 ## About your Team
 
 <!-- ordem alfabetica -->
 <!--*[person 1]*-->
 *Bruno Ochotorena*
 
-Web3 Developer
+Fullstack Web3 Developer
 
 *Fabio Oshiro*
 
-Web3 Developer
+Fullstack Web3 Developer
 
 *Felipe Soares*
 
-[Details about their role in the project]
+Product & Project Manager
 
 Relevant Experience
 
@@ -156,9 +161,9 @@ Relevant Experience
 
 ## Links and resources
 
-Website: [https://url/ ](https://url/)
-Social: [https://url/ ](https://url/)
-Github: [https://url/ ](https://url/)
+Website: [https://calindra.tech/](https://calindra.tech/)  
+Social: [Linkedin](https://www.linkedin.com/company/calindra/mycompany/)  
+Github: [https://github.com/Calindra](https://github.com/Calindra)  
 
 ## ERC-20 Payee address
 
