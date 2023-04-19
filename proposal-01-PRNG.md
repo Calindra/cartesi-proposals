@@ -39,6 +39,48 @@ Some examples of the types of games that can be built with this framework are:
 
 ### Simple PRNG
 
+The Simple PRNG scheme is unpredictable and verifiable, but it is biasable because the block proposer for a given slot can directly manipulate the block’s hash by manipulating the block’s body.
+
+### VDF PRNG
+
+1. Setup a VDF function that takes 2x the block production time.
+2. Send an input to start the process, get the BlockHash of the transaction block `BlockHash[0]`.
+3. Start the computation of `VDF(BlockHash[0])`,
+4. at the same time the network will produce the `BlockHash[1]`
+5. send the result of `VDF(BlockHash[0])` to the contract
+6. the contract will mix the results and generate the random number.
+7. send the number to the target contract.
+
+```mermaid
+stateDiagram-v2
+  BlockHash0: Block 0
+  BlockHash1: Block 1
+  BlockHash2: Block 2
+  VDF: VDF(BlockHash[0])
+  Seed: PRNG(VDF(BlockHash[0]), BlockHash[1])
+  state fork_state <<fork>>
+
+  [*] --> BlockHash0
+  state BlockHash0 {
+    [*] --> FutureBlockConfigured
+    FutureBlockConfigured --> [*]
+  }
+  BlockHash0 --> fork_state
+  fork_state --> VDF
+  fork_state --> BlockHash1
+
+  state join_state <<join>>
+  VDF --> join_state
+  BlockHash1 --> join_state
+  join_state --> BlockHash2
+  state BlockHash2 {
+    [*] --> Seed
+    Seed --> [*]
+  }
+  BlockHash2 --> [*]
+```
+It takes 2 transactions.
+
 ### Hashed Turn Based Seed for PRNG
 
 ```mermaid
@@ -90,6 +132,7 @@ sequenceDiagram
   deactivate Frontend
 
 ```
+
 
 ## Milestones
 
