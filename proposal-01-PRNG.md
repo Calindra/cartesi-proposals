@@ -3,7 +3,7 @@
 
 **Cartesi PRNG**
 
-Our project will offer different ways to generate random numbers that will make it easy for web developers to create DApps using Cartesi.
+Our framework will offer some options to generate random numbers that will make it easy for web3 developers to create DApps using Cartesi.
 
 **Project Description**
 <!-- [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
@@ -22,7 +22,7 @@ Our project will offer three different ways to generate random numbers, each wit
 -->
 
 The main contributions and benefits of this framework are:
-- It will increase the adoption and innovation of Cartesi by lowering the barriers of entry for web developers who want to create DApps using Cartesi.
+- It will increase the adoption and innovation of Cartesi by lowering the barriers of entry for web3 developers who want to create DApps using Cartesi.
 - It will enhance the user experience and satisfaction of game developers by providing a user-friendly interface for interacting with Cartesi technology.
 - It will foster the growth and development of the Cartesi community by providing a valuable resource and tool for DApp developers.
 
@@ -37,6 +37,53 @@ Some examples of the types of games that can be built with this framework are:
 - A decentralized card game that uses Cartesi’s off-chain computation to handle encryption algorithms and game logic to randomize the deck.
 - RPG games that use PRNGs to determine loot drops, enemy spawns, critical hits, etc. 
 
+### Hashed Turn Based Seed for PRNG
+
+```mermaid
+%%{
+  init: {
+    "theme": "dark",
+    "sequence": {
+      "mirrorActors": true,
+      "messageAlign": "left"
+    }
+  }
+}%%
+
+sequenceDiagram
+  actor Bob
+  actor Alice
+  autonumber
+  Bob->>+Frontend: Bob's move
+  Frontend->>Frontend: bob_hash = hash(bob_seed)
+  Frontend->>+ConvenienceSmartContract: save bob_hash
+  ConvenienceSmartContract->>-Frontend: saved
+  Frontend->>Bob: waiting Alice
+
+  Alice->>+Frontend: Alice's move
+  Frontend->>Frontend: alice_hash = hash(alice_seed)
+  Frontend->>+ConvenienceSmartContract: save alice_hash
+  ConvenienceSmartContract->>-Frontend: saved
+  Frontend->>-Alice: waiting seeds
+
+
+
+  Frontend->>+ConvenienceSmartContract: bob_seed
+  ConvenienceSmartContract->>ConvenienceSmartContract: check(hash, seed)
+  ConvenienceSmartContract->>-Frontend: 
+  Frontend->>+ConvenienceSmartContract: alice_seed
+  ConvenienceSmartContract->>ConvenienceSmartContract: check(hash, seed)
+  ConvenienceSmartContract->>ConvenienceSmartContract: seed = hash(b_seed, a_seed)
+  
+  ConvenienceSmartContract->>CartesiInput: random number
+  CartesiInput->>ConvenienceSmartContract: ok
+
+  ConvenienceSmartContract->>-Frontend: ok
+  Frontend->>Alice: ok
+  Frontend->>Bob: ok
+
+```
+
 ## Milestones
 
 **Milestone 1: Simple PRNG**
@@ -48,7 +95,7 @@ Some examples of the types of games that can be built with this framework are:
 
 * Funds request (USD) for milestone 1: [$x USD]
 
-**Milestone 2: Hashed Seed PRNG**
+**Milestone 2: Hashed Turn Based Seed for PRNG**
 
 * Duration: 1 months
 
@@ -85,11 +132,11 @@ Use of funds (specific breakdown):
 <!--*[person 1]*-->
 *Bruno Ochotorena*
 
-[Details about their role in the project]
+Web3 Developer
 
 *Fabio Oshiro*
 
-[Details about their role in the project]
+Web3 Developer
 
 *Felipe Soares*
 
