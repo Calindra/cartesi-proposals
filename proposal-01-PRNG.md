@@ -192,4 +192,5 @@ Github: [https://github.com/Calindra](https://github.com/Calindra)
 
 ## ERC-20 Payee address
 
-[your proposal will be rejected if you do not list a payee address. This address is where payments for the milestones will be made. The address must be a mainnet Ethereum ERC-20 address that can accept USDC.
+<!-- [your proposal will be rejected if you do not list a payee address. This address is where payments for the milestones will be made. The address must be a mainnet Ethereum ERC-20 address that can accept USDC. -->
+0x7cE0AA3DFbB8abdCD0Ea426769ffD21302DAA8B8
