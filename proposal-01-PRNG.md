@@ -43,13 +43,14 @@ The Simple PRNG scheme is unpredictable and verifiable, but it is biasable becau
 
 ### VDF PRNG
 
-1. Setup a VDF function that takes 2x the block production time.
-2. Send an input to start the process, get the BlockHash of the transaction block `BlockHash[0]`.
-3. Start the computation of `VDF(BlockHash[0])`,
-4. at the same time the network will produce the `BlockHash[1]`
-5. send the result of `VDF(BlockHash[0])` to the contract
-6. the contract will mix the results and generate the random number.
-7. send the number to the target contract.
+1. Define a VDF function that takes twice as long as the block production time.
+2. Send an input to initiate the process and obtain the block hash of the transaction block: BlockHash[0].
+3. Compute `VDF(BlockHash[0])` and send the result to the contract.
+4. Meanwhile, the network will produce the next block hash: `BlockHash[1]`.
+5. The contract will combine the results and generate a random number. 
+7. Send the number to the target contract.
+
+
 
 ```mermaid
 stateDiagram-v2
