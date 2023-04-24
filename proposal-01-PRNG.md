@@ -76,7 +76,17 @@ stateDiagram-v2
   BlockHash2 --> [*]
 ```
 
+This algorithm can be exploited by the leader only, if the leader has a sequential processing power more than twice as high as the network's. To illustrate, let's imagine a hypothetical scenario: The leader generates the blockhash, calculates the result of the VDF and if it is not favorable, he generates another blockhash.
+
 ### Hashed Turn Based Seed for PRNG
+
+Based on the commit-reveal but applied to PvP games where the result can be WO.
+
+The commit-reveal is a cryptographic scheme that allows players to hide their choices until they are revealed later. It is used to prevent front-running attacks, where someone can see the transactions in the pool and act before them. The commit-reveal has two phases: a commit phase, where the players send their hashed choices to a smart contract, and a reveal phase, where the players reveal their choices and the contract verifies them. The contract then uses the choices to generate a random outcome for the game.
+
+PvP games are player versus player games, where two players compete against each other. Examples of PvP games are rock-paper-scissors, even or odd, or poker.
+
+The result can be WO means that the result can be a walkover, which is when one player wins by default because the other player does not show up, forfeits, or fails to reveal their choice. 
 
 ```mermaid
 %%{
@@ -139,29 +149,29 @@ sequenceDiagram
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
-* Funds request (USD) for milestone 1: $8,400 USD
+* Funds request (USD) for milestone 1: $8,000 USD
 
 **Milestone 2: VDF PRNG**
 
-* Duration: 2 months
+* Duration: 6 weeks
 
-* Deliverables: Frontend framework and ConvenienceSmartContract
+* Deliverables: Frontend framework and ConvenienceSmartContract implementations
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 2: $16,800 USD
+* Funds request (USD) for milestone 2: $12,000 USD
 
 **Milestone 3: Hashed Turn Based Seed for PRNG**
 
 * Duration: 2 months
 
-* Deliverables: Frontend framework and ConvenienceSmartContract
+* Deliverables: Frontend framework and ConvenienceSmartContract implementations
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 3: $16,800 USD
+* Funds request (USD) for milestone 3: $16,000 USD
 
 ## Total funds requested
 
-### $25,200 USD
+### $36,000 USD
 
 <!--
 Use of funds (specific breakdown):
