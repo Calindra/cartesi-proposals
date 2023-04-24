@@ -40,11 +40,13 @@ The Simple PRNG scheme is unpredictable and verifiable, but it is biasable becau
 
 ### VDF PRNG
 
-1. Define a VDF function that takes twice as long as the block production time.
+For this type of PRNG, we will use a VDF - Verifiable Delay Function for cryptography. A VDF is a function that takes a certain amount of time to compute, and cannot be accelerated through parallelization or additional processors. Once computed, the output can be quickly verified by anyone.
+
+1. Define a VDF that takes twice as long as the block production time.
 2. Send an input to initiate the process and obtain the block hash of the transaction block: BlockHash[0].
 3. Compute `VDF(BlockHash(N))` and send the result to the contract.
 4. Meanwhile, the network will produce the next block hash: `BlockHash(N+1)`.
-5. The contract will combine the results and generate a random number. 
+5. The contract will combine the VDF results with the block hash and generate a random number. 
 6. Send the number to the target contract.
 
 ```mermaid
