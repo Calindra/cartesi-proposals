@@ -13,10 +13,10 @@ The goal of this project is to create a framework for Cartesi that will make it 
 * be documented with Docusaurus;
 * be published on npm and GitHub and maintained with semantic versioning.
 
-Our project will offer three different ways to generate random numbers, each with its own advantages and disadvantages:
+Our project will offer two different ways to generate random numbers, each with its own advantages and disadvantages:
 1. The first type uses block number, clock, and end user ethereum address to make a seed. This is a simple way to generate a seed that depends on some external factors that are hard to predict or manipulate. However, this type of PRNG may not be very secure or random, as it may be vulnerable to attacks or biases.
-2. The second type uses a hash function for a number to generate the seed. This is a more secure and random way to generate a seed, as hash functions are designed to produce outputs that are unpredictable and uniformly distributed. However, this type of PRNG may require more transaction steps and may not be very efficient.
-3. The third type uses Chainlink, which is a decentralized oracle network that provides access to various sources of randomness. This is a reliable and verifiable way to generate a seed, as Chainlink uses multiple nodes and cryptographic proofs to ensure the quality and integrity of the randomness. However, this type of PRNG may involve some costs and delays, as it depends on the availability and performance of the Chainlink network3.
+2. The second type uses VDF - Verifiable Delay Function, which will produce an unpredictable result in the future while the blockchain network is making another block. That way, the resulting seed cannot be predicted or biased. Also, the VDF result can be provided by anyone to avoid tampering.
+3. The third type uses a hash function to commit to a number that will be revealed in the future and generate the seed. This is a more secure and random way to generate a seed, as hash functions are designed to produce outputs that are unpredictable and uniformly distributed. However, this type of PRNG may require more transaction steps and may not be very efficient.
 
 **Value proposition**
 <!-- [Why would someone use this product/service? Or how does it add value to the Cartesi ecosystem or tech stack?]
@@ -42,24 +42,24 @@ The Simple PRNG scheme is unpredictable and verifiable, but it is biasable becau
 
 1. Define a VDF function that takes twice as long as the block production time.
 2. Send an input to initiate the process and obtain the block hash of the transaction block: BlockHash[0].
-3. Compute `VDF(BlockHash[0])` and send the result to the contract.
-4. Meanwhile, the network will produce the next block hash: `BlockHash[1]`.
+3. Compute `VDF(BlockHash(N))` and send the result to the contract.
+4. Meanwhile, the network will produce the next block hash: `BlockHash(N+1)`.
 5. The contract will combine the results and generate a random number. 
 6. Send the number to the target contract.
 
 ```mermaid
 stateDiagram-v2
-  BlockHash0: Block 0
-  BlockHash1: Block 1
-  BlockHash2: Block 2
-  VDF: VDF(BlockHash[0])
-  Seed: PRNG(VDF(BlockHash[0]), BlockHash[1])
+  BlockHash0: Block N
+  BlockHash1: Block N+1
+  BlockHash2: Block N+2
+  VDF: R = VDF(BlockHash(N))
+  Seed: PRNG(R, BlockHash(N+1))
   state fork_state <<fork>>
 
   [*] --> BlockHash0
   state BlockHash0 {
-    [*] --> FutureBlockConfigured
-    FutureBlockConfigured --> [*]
+    [*] --> PRNGConfig
+    PRNGConfig --> [*]
   }
   BlockHash0 --> fork_state
   fork_state --> VDF
@@ -75,7 +75,6 @@ stateDiagram-v2
   }
   BlockHash2 --> [*]
 ```
-It takes 2 transactions.
 
 ### Hashed Turn Based Seed for PRNG
 
@@ -151,6 +150,15 @@ sequenceDiagram
 
 * Funds request (USD) for milestone 2: $16,800 USD
 
+**Milestone 3: Hashed Turn Based Seed for PRNG**
+
+* Duration: 2 months
+
+* Deliverables: Frontend framework and ConvenienceSmartContract
+<!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
+
+* Funds request (USD) for milestone 3: $16,800 USD
+
 ## Total funds requested
 
 ### $25,200 USD
@@ -186,7 +194,7 @@ Contributions to the Cartesi community:
 
 ## Links and resources
 
-Website: [https://calindra.tech/](https://calindra.tech/)  
+Website: [https://calindra.tech](https://calindra.tech)  
 Social: [Linkedin](https://www.linkedin.com/company/calindra/mycompany/)  
 Github: [https://github.com/Calindra](https://github.com/Calindra)  
 
