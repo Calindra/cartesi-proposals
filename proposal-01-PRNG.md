@@ -192,12 +192,12 @@ Use of funds (specific breakdown):
 *Bruno Ochotorena*
 
 Web3 Developer
-https://www.linkedin.com/in/sandhilt
+LinkedIn: /in/sandhilt
 
 *Fabio Oshiro*
 
 Web3 Specialist
-https://www.linkedin.com/in/fabiooshiro
+LinkedIn: /in/fabiooshiro
 
 Contributions to the Cartesi community:
 
@@ -206,11 +206,11 @@ Contributions to the Cartesi community:
 
 ## Links and resources
 
-Website: https://calindra.tech 
+Website: calindra.tech 
 
-Social: https://www.linkedin.com/company/calindra/mycompany/
+LinkedIn: /company/calindra/mycompany/
 
-Github: https://github.com/Calindra 
+Github: /Calindra 
 
 ## ERC-20 Payee address
 
