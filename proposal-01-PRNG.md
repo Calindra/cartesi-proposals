@@ -8,7 +8,7 @@ A set of tools to generate random numbers on Cartesi's convenience layer.
 <!-- [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
 -->
 The goal of this project is to create a framework for Cartesi that will make it easy for web3 developers to create DApps using Cartesi. The framework will:
-* use React and TypeScript to create a modular and reusable component library that will provide a common PRNG (Pseudo-Random Nunber Generator) algorithm to Cartesi technology;
+* use React and TypeScript to create a modular and reusable component library that will provide a common PRNG (Pseudo-Random Number Generator) algorithm to Cartesi technology;
 * use Web3.js and Cartesi's SDK to connect to the blockchain and the Cartesi Machine;
 * be documented with Docusaurus;
 * be published on npm and GitHub and maintained with semantic versioning.
