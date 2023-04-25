@@ -13,7 +13,7 @@ The goal of this project is to create a framework for Cartesi that will make it 
 * be documented with Docusaurus;
 * be published on npm and GitHub and maintained with semantic versioning.
 
-Our project will offer two different ways to generate random numbers, each with its own advantages and disadvantages:
+Our project will offer three different ways to generate random numbers, each with its own advantages and disadvantages:
 1. The first type uses block number, clock, and end user ethereum address to make a seed. This is a simple way to generate a seed that depends on some external factors that are hard to predict or manipulate. However, this type of PRNG may not be very secure or random, as it may be vulnerable to attacks or biases.
 2. The second type uses VDF - Verifiable Delay Function, which will produce an unpredictable result in the future while the blockchain network is making another block. That way, the resulting seed cannot be predicted or biased. Also, the VDF result can be provided by anyone to avoid tampering.
 3. The third type uses a hash function to commit to a number that will be revealed in the future and generate the seed. This is a more secure and random way to generate a seed, as hash functions are designed to produce outputs that are unpredictable and uniformly distributed. However, this type of PRNG may require more transaction steps and may not be very efficient.
@@ -144,7 +144,7 @@ sequenceDiagram
 
 **Milestone 1: Simple PRNG**
 
-* Duration: 1 months
+* Duration: 4 weeks
 
 * Deliverables: A simple method to generate random numbers
 <!-- 
@@ -164,7 +164,7 @@ sequenceDiagram
 
 **Milestone 3: Hashed Turn Based Seed for PRNG**
 
-* Duration: 2 months
+* Duration: 8 weeks
 
 * Deliverables: Frontend framework and ConvenienceSmartContract implementations
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
