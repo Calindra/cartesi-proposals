@@ -206,9 +206,11 @@ Contributions to the Cartesi community:
 
 ## Links and resources
 
-Website: [https://calindra.tech](https://calindra.tech)  
-Social: [Linkedin](https://www.linkedin.com/company/calindra/mycompany/)  
-Github: [https://github.com/Calindra](https://github.com/Calindra)  
+Website: https://calindra.tech 
+
+Social: https://www.linkedin.com/company/calindra/mycompany/
+
+Github: https://github.com/Calindra 
 
 ## ERC-20 Payee address
 
