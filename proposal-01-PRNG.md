@@ -146,7 +146,15 @@ sequenceDiagram
 
 * Duration: 4 weeks
 
-* Deliverables: A simple method to generate random numbers
+* Deliverables:
+  1. An automated build and test process of the npm library artifact using Github Actions;
+  2. An automated packaging and release process for the npm library;
+  3. The entire codebase under a permissive MIT open-source license;
+  4. A readme file explains the project;
+  5. An smart contract with a new attribute in input_metadata to receive blockhash;
+  6. A library for the Cartesi Machine that obtains all the seeds and produces a random number
+
+A simple method to generate random numbers
 <!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
