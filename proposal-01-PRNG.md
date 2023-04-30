@@ -150,7 +150,7 @@ sequenceDiagram
   1. An automated build and test process of the npm library artifact using Github Actions;
   2. An automated packaging and release process for the npm library;
   3. The entire codebase under a permissive MIT open-source license;
-  4. A readme file explains the project;
+  4. A readme file that explains the project;
   5. An smart contract with a new attribute in input_metadata to receive blockhash;
   6. A library for the Cartesi Machine that obtains all the seeds and produces a random number
 
@@ -165,7 +165,16 @@ A simple method to generate random numbers
 
 * Duration: 6 weeks
 
-* Deliverables: Frontend framework and ConvenienceSmartContract implementations
+* Deliverables: 
+  1. An automated build and test process of the library artifact using Github Actions;
+  2. An automated packaging and release process for the npm library;
+  3. The entire codebase under a permissive MIT open-source license;
+  4. A readme file that provides an overview of the project;
+  5. An smart contract with:
+    1. a new attribute in input_metadata to receive blockhash;
+    2. a new method to verify the VDF result;
+    3. a new method to register the configuration;
+  6. A library for the Cartesi Machine that obtains the generated seed and produces a random number
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
 * Funds request (USD) for milestone 2: $12,000 USD
