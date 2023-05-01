@@ -8,4 +8,4 @@ To overcome this challenge, I propose to use a public folder inside the Cartesi 
 
 The main benefit of my project is that it would enable the creation of dynamic NFTs that are fully decentralized and transparent. The dynamic NFTs would not rely on any off-chain services or data sources to change their characteristics. The dynamic NFTs would also be verifiable by anyone who can inspect the state of the Cartesi Machine.
 
-I believe that my project would be a valuable contribution to the Cartesi ecosystem and the NFT space in general. I have extensive experience in developing GAN models and working with the Cartesi Machine.
+I believe that my project would be a valuable contribution to the Cartesi ecosystem and the NFT game space in general.
