@@ -49,6 +49,8 @@ For this type of PRNG, we will use a VDF - Verifiable Delay Function for cryptog
 5. The contract will combine the VDF results with the block hash and generate a random number. 
 6. Send the number to the target contract.
 
+![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_1.svg)
+<!--
 ```mermaid
 stateDiagram-v2
   BlockHash0: Block N
@@ -77,7 +79,8 @@ stateDiagram-v2
   }
   BlockHash2 --> [*]
 ```
-
+-->
+  
 This algorithm can be exploited by the leader only, if the leader has a sequential processing power more than twice as high as the network's. To illustrate, let's imagine a hypothetical scenario: The leader generates the blockhash, calculates the result of the VDF and if it is not favorable, he generates another blockhash.
 
 ### Hashed Turn Based Seed for PRNG
@@ -90,6 +93,8 @@ PvP games are player versus player games, where two players compete against each
 
 The result can be WO means that the result can be a walkover, which is when one player wins by default because the other player does not show up, forfeits, or fails to reveal their choice. 
 
+![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_1.svg)
+<!--
 ```mermaid
 %%{
   init: {
@@ -139,7 +144,8 @@ sequenceDiagram
   deactivate Frontend
 
 ```
-
+-->
+  
 ## Milestones
 
 **Milestone 1: Simple PRNG**
