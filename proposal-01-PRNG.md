@@ -50,37 +50,7 @@ For this type of PRNG, we will use a VDF - Verifiable Delay Function for cryptog
 6. Send the number to the target contract.
 
 ![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_1.svg)
-<!--
-```mermaid
-stateDiagram-v2
-  BlockHash0: Block N
-  BlockHash1: Block N+1
-  BlockHash2: Block N+2
-  VDF: R = VDF(BlockHash(N))
-  Seed: PRNG(R, BlockHash(N+1))
-  state fork_state <<fork>>
-
-  [*] --> BlockHash0
-  state BlockHash0 {
-    [*] --> PRNGConfig
-    PRNGConfig --> [*]
-  }
-  BlockHash0 --> fork_state
-  fork_state --> VDF
-  fork_state --> BlockHash1
-
-  state join_state <<join>>
-  VDF --> join_state
-  BlockHash1 --> join_state
-  join_state --> BlockHash2
-  state BlockHash2 {
-    [*] --> Seed
-    Seed --> [*]
-  }
-  BlockHash2 --> [*]
-```
--->
-  
+ 
 This algorithm can be exploited by the leader only, if the leader has a sequential processing power more than twice as high as the network's. To illustrate, let's imagine a hypothetical scenario: The leader generates the blockhash, calculates the result of the VDF and if it is not favorable, he generates another blockhash.
 
 ### Hashed Turn Based Seed for PRNG
@@ -93,59 +63,8 @@ PvP games are player versus player games, where two players compete against each
 
 The result can be WO means that the result can be a walkover, which is when one player wins by default because the other player does not show up, forfeits, or fails to reveal their choice. 
 
-![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_1.svg)
-<!--
-```mermaid
-%%{
-  init: {
-    "theme": "dark",
-    "sequence": {
-      "mirrorActors": true,
-      "messageAlign": "left"
-    }
-  }
-}%%
+![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_2.svg)
 
-sequenceDiagram
-  actor Bob
-  actor Alice
-  participant Frontend as Frontend Framework
-  autonumber
-  Bob->>+Frontend: Bob's move
-  activate Frontend
-  Frontend->>Frontend: bob_hash = hash(bob_seed)
-  Frontend->>+ConvenienceSmartContract: save bob_hash
-  ConvenienceSmartContract->>-Frontend: saved
-  Frontend-->>Bob: waiting Alice
-
-  Alice->>Frontend: Alice's move
-  activate Frontend
-  Frontend->>Frontend: alice_hash = hash(alice_seed)
-  Frontend->>+ConvenienceSmartContract: save alice_hash
-  ConvenienceSmartContract->>-Frontend: saved
-  Frontend-->>Alice: waiting seeds
-
-
-
-  Frontend->>+ConvenienceSmartContract: bob_seed
-  ConvenienceSmartContract->>ConvenienceSmartContract: check(hash, seed)
-  ConvenienceSmartContract-->>-Frontend: ok
-  Frontend->>+ConvenienceSmartContract: alice_seed
-  ConvenienceSmartContract->>ConvenienceSmartContract: check(hash, seed)
-  ConvenienceSmartContract->>ConvenienceSmartContract: mix_seed = hash(b_seed, a_seed)
-  
-  ConvenienceSmartContract->>+CartesiInput: random(mix_seed)
-  CartesiInput-->>-ConvenienceSmartContract: ok
-
-  ConvenienceSmartContract-->>-Frontend: ok
-  Frontend-->>Alice: ok
-  deactivate Frontend
-  Frontend-->>Bob: ok
-  deactivate Frontend
-
-```
--->
-  
 ## Milestones
 
 **Milestone 1: Simple PRNG**
