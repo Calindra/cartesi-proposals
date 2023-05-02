@@ -151,7 +151,7 @@ sequenceDiagram
   2. An automated packaging and release process for the npm library;
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that explains the project;
-  5. An smart contract with a new attribute in input_metadata to receive blockhash;
+  5. A smart contract with a new attribute in input_metadata to receive blockhash;
   6. A library for the Cartesi Machine that obtains all the seeds and produces a random number sequence
 
 A simple method to generate random numbers
@@ -170,7 +170,7 @@ A simple method to generate random numbers
   2. An automated packaging and release process for the npm library;
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that provides an overview of the project;
-  5. An smart contract with:
+  5. A smart contract with:
       1. a new method to verify the VDF result;
       2. a new method to register the configuration;
       3. a new attribute in input_metadata to receive the seed;
@@ -189,7 +189,7 @@ A simple method to generate random numbers
   2. An automated packaging and release process for the npm library;
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that provides an overview of the project;
-  5. An smart contract with:
+  5. A smart contract with:
       1. a new method to register the commit hash;
       2. a new method to check the revealed result;
       3. a new attribute in input_metadata to receive the seed;
