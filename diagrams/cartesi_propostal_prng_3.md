@@ -43,3 +43,7 @@ sequenceDiagram
 Bob starts a new random number process by calling the REST Convenience API. Bob’s payload includes a signed receipt that can be executed by the Convenience Service if Bob fails to reveal his secret. The Convenience API responds with a signed commit and receipt.
 
 We know that the user’s dApp calls the rollup server, we change the arrow direction to make the problem easier to think about. In reality, dApps will call our middleware and our middleware will call the rollup server.
+
+Neither Bob nor Convenience can claim counterpart's share until Bob completes step 3, which involves Bob’s secret seed and Convenience’s signed commit.
+
+There is a certain amount of money that must be staked as a guarantee to ensure the disclosure of the secrets.
