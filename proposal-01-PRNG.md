@@ -21,7 +21,7 @@ Our project will offer three different ways to generate random numbers, each wit
 **Value proposition**
 <!-- [Why would someone use this product/service? Or how does it add value to the Cartesi ecosystem or tech stack?]
 -->
-We believe that creating these tools for developers we remove a important entry barrier for them. Random numbers are an essential part of many apps and DApps, specialy games. So, as we add this feature to the convenience layer, we expect to see an increase in Cartesi's adoption and in our community growth.
+We believe that creating these tools for developers we remove a important entry barrier for them. Random numbers are an essential part of many apps and DApps, specially games. So, as we add this feature to the convenience layer, we expect to see an increase in Cartesi's adoption and in our community growth.
 
 Here are some types of games that could benefit from this framework:
 - A decentralized soccer game that uses Cartesi’s random algorithm to generate fair and unpredictable moves for both players;
