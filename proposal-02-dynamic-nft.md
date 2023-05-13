@@ -25,3 +25,84 @@ Unlike common NFTs that store their metadata and assets off-chain, our dynamic N
 
 This project aims to add tooling for building DApps on Cartesi, which is why it makes sense to have the support of the community. The power of Cartesi's technology could open up new horizons in the crypto space. While we are currently revolutionizing the backend side by replacing it with smart contracts, we have the opportunity to advance frontend technology, which is lagging behind in terms of trustless, security, and ownership.
 
+## Milestones
+
+**Milestone 1: Public Folder**
+
+* Duration: 4 weeks
+
+* Deliverables: (draft)
+  1. An automated build and test process of the rust library artifact using Github Actions;
+  2. An automated packaging and release process for the rust library;
+  3. The entire codebase under a permissive MIT open-source license;
+  4. A readme file that explains the project;
+
+A public folder that can be accessed through HTTP and is compatible with wallets for retrieving the NFTs.
+<!-- 
+[what will be produced, accomplished, or demonstrated by the end of this period?]
+-->
+
+* Funds request (USD) for milestone 1: $8,000 USD
+
+**Milestone 2: Game Example**
+
+* Duration: 4 weeks
+
+* Deliverables: (draft)
+  1. An automated build and test process of the rust library artifact using Github Actions;
+  2. An automated packaging and release process for the rust library;
+  3. The entire codebase under a permissive MIT open-source license;
+  4. A readme file that explains the project;
+
+An example game that demonstrates the functionality of the first milestone.
+<!-- 
+[what will be produced, accomplished, or demonstrated by the end of this period?]
+-->
+
+* Funds request (USD) for milestone 2: $8,000 USD
+
+## Total funds requested
+
+### $16,000 USD
+
+<!--
+Use of funds (specific breakdown):
+
+* [List item: price in usd]
+* [List item: price in usd]
+* [List item: price in usd]
+* [List item: price in usd]
+* [List item: price in usd]
+* [List item: price in usd]
+-->
+## About your Team
+
+<!-- ordem alfabetica -->
+<!--*[person 1]*-->
+*Bruno Ochotorena*
+
+Web3 Developer
+LinkedIn: [/in/sandhilt](https://www.linkedin.com/in/sandhilt)
+
+*Fabio Oshiro*
+
+Web3 Specialist
+LinkedIn: [/in/fabiooshiro](https://www.linkedin.com/in/fabiooshiro)
+
+Contributions to the Cartesi community:
+
+* [We ran a Solana DApp on Ethereum using Cartesi](https://blog.calindra.com.br/we-ran-a-solana-dapp-on-ethereum-using-cartesi-35da59ed1e47)
+* [Open-Source: Cartesi’s Solana adapters](https://blog.calindra.com.br/solana-cartesi-under-the-hood-c4fbef266c89)
+
+## Links and resources
+
+Website: [calindra.tech](https://calindra.tech/) 
+
+LinkedIn: [/company/calindra](https://www.linkedin.com/company/calindra)
+
+Github: [/Calindra](https://github.com/Calindra) 
+
+## ERC-20 Payee address
+
+<!-- [your proposal will be rejected if you do not list a payee address. This address is where payments for the milestones will be made. The address must be a mainnet Ethereum ERC-20 address that can accept USDC. -->
+0x7cE0AA3DFbB8abdCD0Ea426769ffD21302DAA8B8
