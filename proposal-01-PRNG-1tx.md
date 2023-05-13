@@ -31,6 +31,7 @@ Here are some types of games that could benefit from this framework:
 
 This project aims to add tooling to build DApps on Cartesi, and this is why it makes sense to have community's support. The following sections describe how each of the algorithms will interact with the Cartesi environment.
 
+![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_3-1tx.png)
 ### Convenience PRNG
 
 Bob starts a new random number process by calling the REST Convenience API. Bob’s payload includes a signed receipt that can be executed by the Convenience Service if Bob fails to reveal his secret. The Convenience API responds with a signed commit and receipt.
@@ -41,7 +42,6 @@ Neither Bob nor Convenience can claim counterpart's share until Bob completes st
 
 There is a certain amount of money that must be staked as a guarantee to ensure the disclosure of the secrets.
 
-![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_3-1tx.png)
 
 ## Milestones
 
