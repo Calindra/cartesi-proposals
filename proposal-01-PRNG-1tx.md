@@ -29,13 +29,13 @@ Here are some types of games that could benefit from this framework:
 
 <!--[Details about how you're using Cartesi specifically, and why it makes sense. This is the most important part of the proposal. If you are not precise, or your intention is not feasible, the proposal will be rejected.]-->
 
-This project aims to add tooling to build DApps on Cartesi, and this is why it makes sense to have community's support. The following sections describe how this algorithm will interact with the Cartesi environment.
+This project aims to add tooling to build DApps on Cartesi, and this is why it makes sense to have community's support. The following sections describe how this algorithm will interact with the Cartesi environment to generate a trustless random number.
 
 ### Convenience PRNG
 
-![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_3-1tx.png)
+![Diagram](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_3-1tx.png?raw=true)
 
-Bob starts a new random number process by calling the REST Convenience API. Bob’s payload includes a signed receipt that can be executed by the Convenience Service if Bob fails to reveal his secret. The Convenience API responds with a signed commit and receipt.
+Bob starts a new random number process by calling the REST Convenience API. Bob’s payload includes a signed receipt that can be executed by the Convenience layer if Bob fails to reveal his secret. The Convenience API responds with a signed commit and receipt.
 
 We know that the user’s dApp calls the rollup server, we change the arrow direction to make the problem easier to think about. In reality, dApps will call our middleware and our middleware will call the rollup server.
 
@@ -84,7 +84,7 @@ The MVP to demonstrate the use case of generating a random number with the Conve
 
 * Funds request (USD) for milestone 2: $12,000 USD
 
-**Milestone 3: Convenience Client**
+**Milestone 3: Convenience Web3 Client**
 
 * Duration: 8 weeks
 
