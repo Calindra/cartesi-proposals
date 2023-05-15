@@ -16,19 +16,19 @@ sequenceDiagram
   participant UserProgram as <<Cartesi Machine>><br>User dApp Program
   autonumber
 
-  Bob->>+ConvenienceAPI: signed Bob's commit and receipt
-  ConvenienceAPI-->>-Bob: signed Convenience's commit and receipt
+  Bob->>+ConvenienceAPI: signed Bob's commit hash and receipt
+  ConvenienceAPI-->>-Bob: signed Convenience's commit hash and receipt
 
   # BOB REVEAL
-  Bob->>+CM: Bob's secret seed and Convenience signed commit
-  CM->>+ConvenienceMiddleware: input: secret seed and Convenience signed commit
+  Bob->>+CM: Bob reveals the secret and also send the Convenience's signed commit hash
+  CM->>+ConvenienceMiddleware: input: revealed secret and Convenience's signed commit hash
   ConvenienceMiddleware->>ConvenienceMiddleware: save input
   ConvenienceMiddleware-->>-CM: ok
   CM-->>-Bob: ok
 
   # CONVENIENCE REVEAL
-  ConvenienceAPI->>+CM: Convenience's secret
-  CM->>+ConvenienceMiddleware: input: Convenience's secret
+  ConvenienceAPI->>+CM: input: Convenience's revealed secret
+  CM->>+ConvenienceMiddleware: input: Convenience's revealed secret
   ConvenienceMiddleware->>ConvenienceMiddleware: verify commit hashes
   ConvenienceMiddleware->>ConvenienceMiddleware: create seed
   ConvenienceMiddleware->>+UserProgram: generated seed
