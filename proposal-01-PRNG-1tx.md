@@ -2,7 +2,7 @@
 
 **Cartesi PRNG**
 
-A set of tools to generate random numbers on Cartesi's convenience layer.
+This project is a component of a larger set of tools for generating random numbers on Cartesi’s convenience layer.
 
 **Project Description**
 <!-- [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
@@ -29,10 +29,11 @@ Here are some types of games that could benefit from this framework:
 
 <!--[Details about how you're using Cartesi specifically, and why it makes sense. This is the most important part of the proposal. If you are not precise, or your intention is not feasible, the proposal will be rejected.]-->
 
-This project aims to add tooling to build DApps on Cartesi, and this is why it makes sense to have community's support. The following sections describe how each of the algorithms will interact with the Cartesi environment.
+This project aims to add tooling to build DApps on Cartesi, and this is why it makes sense to have community's support. The following sections describe how this algorithm will interact with the Cartesi environment.
+
+### Convenience PRNG
 
 ![](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_3-1tx.png)
-### Convenience PRNG
 
 Bob starts a new random number process by calling the REST Convenience API. Bob’s payload includes a signed receipt that can be executed by the Convenience Service if Bob fails to reveal his secret. The Convenience API responds with a signed commit and receipt.
 
@@ -45,7 +46,9 @@ There is a certain amount of money that must be staked as a guarantee to ensure 
 
 ## Milestones
 
-**Milestone 1: Simple PRNG**
+**Milestone 1: Convenience MVP**
+
+The MVP to demonstrate the use case of generating a random number with the Convenience tools.
 
 * Duration: 4 weeks
 
@@ -57,14 +60,13 @@ There is a certain amount of money that must be staked as a guarantee to ensure 
   5. A smart contract with a new attribute in input_metadata to receive blockhash;
   6. A library for the Cartesi Machine that obtains all the seeds and produces a random number sequence
 
-A simple method to generate random numbers
 <!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
 * Funds request (USD) for milestone 1: $8,000 USD
 
-**Milestone 2: VDF PRNG**
+**Milestone 2: Convenience Edge Cases**
 
 * Duration: 6 weeks
 
@@ -82,7 +84,7 @@ A simple method to generate random numbers
 
 * Funds request (USD) for milestone 2: $12,000 USD
 
-**Milestone 3: Hashed Turn Based Seed for PRNG**
+**Milestone 3: Convenience Client**
 
 * Duration: 8 weeks
 
