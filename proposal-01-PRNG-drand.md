@@ -43,49 +43,45 @@ When an input requesting a random number arrives, it will force any subsequent i
 
 We know that the user’s DApp calls the rollup server, we change the arrow direction to make the problem easier to think about. In reality, DApps will call our middleware and our middleware will call the rollup server.
 
-## Milestones (Draft)
+## Milestones
 
-**Milestone 1: Convenience MVP**
+**Milestone 1: Convenience POC**
 
-The MVP to demonstrate the use case of generating a random number with the Convenience tools.
+POC to demonstrate the use case of generating a random number with the Convenience tools.
 
-* Duration: ? weeks
+* Duration: 8 weeks
 
 * Deliverables:
   1. An automated build and test process of the npm library artifact using Github Actions;
   2. An automated packaging and release process for the npm library;
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that explains the project;
-  5. A smart contract with a new attribute in input_metadata to receive blockhash;
-  6. A library for the Cartesi Machine that obtains all the seeds and produces a random number sequence
+  5. A Convenience Middleware with a new attribute in input_metadata to receive the generated seed;
+  6. A library for the Cartesi Machine that obtains all the seeds and produces a random number sequence;
+  7. A Convenience API (web2 application) that reads the drand's beacon and sends it to Cartesi Rollups as needed;
+  8. An example of a simple game project that can help new developers learn how to use the solution;
 
 <!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
-* Funds request (USD) for milestone 1: $??? USD
+* Funds request (USD) for milestone 1: $16,000 USD
 
 **Milestone 2: Convenience Edge Cases**
 
-* Duration: ? weeks
+* Duration: 5 weeks
 
 * Deliverables: 
-  1. An automated build and test process of the library artifact using Github Actions;
-  2. An automated packaging and release process for the npm library;
-  3. The entire codebase under a permissive MIT open-source license;
-  4. A readme file that provides an overview of the project;
-  5. A smart contract with:
-      1. a new method to verify the VDF result;
-      2. a new method to register the configuration;
-      3. a new attribute in input_metadata to receive the seed;
-  6. A library for the Cartesi Machine that obtains the generated seed and produces a random number sequence
+  1. A list of edge cases (Drand signature error, drand timeout);
+  2. An method to update the Drand's public key;
+  3. An automated tests to cover edge cases;
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 2: $??? USD
+* Funds request (USD) for milestone 2: $10,000 USD
 
 **Milestone 3: Convenience Web3 Client**
 
-* Duration: ? weeks
+* Duration: 3 weeks
 
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 * Deliverables: 
@@ -93,17 +89,12 @@ The MVP to demonstrate the use case of generating a random number with the Conve
   2. An automated packaging and release process for the npm library;
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that provides an overview of the project;
-  5. A smart contract with:
-      1. a new method to register the commit hash;
-      2. a new method to check the revealed result;
-      3. a new attribute in input_metadata to receive the seed;
-  6. A library for the Cartesi Machine that obtains the generated seed and produces a random number sequence
 
-* Funds request (USD) for milestone 3: $??? USD
+* Funds request (USD) for milestone 3: $6,000 USD
 
 ## Total funds requested
 
-### $??? USD
+### $32,000 USD
 
 <!--
 Use of funds (specific breakdown):
@@ -119,15 +110,11 @@ Use of funds (specific breakdown):
 
 <!-- ordem alfabetica -->
 <!--*[person 1]*-->
-*Bruno Ochotorena*
+*Calindra*
 
-Web3 Developer
-LinkedIn: [/in/sandhilt](https://www.linkedin.com/in/sandhilt)
+Calindra helps our partners to execute their digital strategy through a experienced and talented team.
 
-*Fabio Oshiro*
-
-Web3 Specialist
-LinkedIn: [/in/fabiooshiro](https://www.linkedin.com/in/fabiooshiro)
+[Calindra Team](https://calindra.tech/team.html)
 
 Contributions to the Cartesi community:
 
