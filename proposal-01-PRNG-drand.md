@@ -94,7 +94,7 @@ POC to demonstrate the use case of generating a random number with the Convenien
 
 ## Total funds requested
 
-### $32,000 USD
+### $21,000 USD
 
 <!--
 Use of funds (specific breakdown):
