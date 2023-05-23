@@ -65,7 +65,7 @@ POC to demonstrate the use case of generating a random number with the Convenien
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
-* Funds request (USD) for milestone 1: $16,000 USD
+* Funds request (USD) for milestone 1: $10,500 USD
 
 **Milestone 2: Convenience Edge Cases**
 
@@ -77,7 +77,7 @@ POC to demonstrate the use case of generating a random number with the Convenien
   3. An automated tests to cover edge cases;
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 2: $10,000 USD
+* Funds request (USD) for milestone 2: $6,563 USD
 
 **Milestone 3: Convenience Web3 Client**
 
@@ -90,7 +90,7 @@ POC to demonstrate the use case of generating a random number with the Convenien
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that provides an overview of the project;
 
-* Funds request (USD) for milestone 3: $6,000 USD
+* Funds request (USD) for milestone 3: $3,937 USD
 
 ## Total funds requested
 
