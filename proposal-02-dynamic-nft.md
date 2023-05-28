@@ -52,7 +52,7 @@ A simple NFT game example that demonstrates the functionality of the first miles
 Samurai Monkey Battle
 
 There is only one characteristic: dexterity. When the user buys a monkey, the DApp will generate a random face and dexterity value. Each player chooses a monkey. If the monkey suffers a hit, it loses. The success of the hit will be calculated by: random > (dexA / (dexB + dexA)). If both monkeys get hit, it’s a draw result. 
-Each battle gives monkeyA XP points: 100 x (dexB / (dexB + dexA)). Each level up gives 1 point in dex.
+Each battle gives monkeyA XP points: 100 x (dexB / (dexB + dexA)). Each level up gives 1 point in dex. RPG level formula: XP = (level/x)^y; x = 0.06; y = 1.6;
 
 * Duration: 3 weeks
 
