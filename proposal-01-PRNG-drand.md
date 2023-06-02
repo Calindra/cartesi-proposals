@@ -33,7 +33,7 @@ This project aims to add tooling to build DApps on Cartesi, and this is why it m
 
 ### Drand PRNG
 
-![Diagram](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_5-drand.png?raw=true)
+![Diagram](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_5-drand-v2.png?raw=true)
 
 Bob starts a new random number process by sending a specific input to the Cartesi Rollups. This input will be recognized by the Convenience Middleware inside the Cartesi Machine and stored until Drand’s beacon arrives. The Convenience API will inspect the Cartesi Machine periodically to see if there is any input stored waiting for a beacon. When the Convenience API detects an awaiting input, it will request the latest beacon from the Drand network and send this beacon to the Cartesi Rollups.
 
