@@ -39,7 +39,7 @@ Bob initiates a new random number process by sending an input to the Cartesi Rol
 
 The Convenience API will periodically inspect the Cartesi Machine to check if there are any inputs awaiting a beacon. When the Convenience API detects an input waiting for a random number, it will request the latest beacon from the Drand network and send it to the Cartesi Rollups.
 
-The Convenience Middleware will calculate the creation time of the beacon by subtracting a safe amount of seconds to prevent any prior knowledge of the beacon by the user. Within this safe time, it will load the pending inputs sent before that timestamp and add a seed property to the input metadata. Finally, the DApp will receive the input with the seed metadata to generate a random number.
+The Random Server will calculate the creation time of the beacon by subtracting a safe number of seconds to prevent any prior knowledge of the beacon by the user. Within this safe time, it will load the pending random requests sent before that timestamp and respond with a generated seed. Finally, the DApp will receive that seed to generate a random number.
 
 When an input backend execution requesting a random number arrives, it will force any subsequent inputs (whether they require a random number or not) to be stored until the next Drand beacon arrives. This rule ensures the correct sequence of input execution.
 
