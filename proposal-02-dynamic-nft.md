@@ -29,7 +29,9 @@ This project aims to add tooling for building DApps on Cartesi, which is why it 
 
 **Milestone 1: Public Folder**
 
-* Duration: 4 weeks
+A public folder that can be accessed through HTTP and is compatible with wallets for retrieving the NFTs.
+
+* Duration: 6 weeks
 
 * Deliverables: (draft)
   1. An automated build and test process of the rust library artifact using Github Actions;
@@ -37,16 +39,22 @@ This project aims to add tooling for building DApps on Cartesi, which is why it 
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that explains the project;
 
-A public folder that can be accessed through HTTP and is compatible with wallets for retrieving the NFTs.
 <!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
-* Funds request (USD) for milestone 1: $8,000 USD
+* Funds request (USD) for milestone 1: $7,875 USD
 
 **Milestone 2: Game Example**
 
-* Duration: 4 weeks
+A simple NFT game example that demonstrates the functionality of the first milestone.  
+
+Samurai Monkey Battle
+
+There is only one characteristic: dexterity. When the user buys a monkey, the DApp will generate a random face and dexterity value. Each player chooses a monkey. If the monkey suffers a hit, it loses. The success of the hit will be calculated by: random > (dexA / (dexB + dexA)). If both monkeys get hit, it’s a draw result. 
+Each battle gives monkeyA XP points: 100 x (dexB / (dexB + dexA)). Each level up gives 1 point in dex. RPG level formula: XP = (level/x)^y; x = 0.06; y = 1.6;
+
+* Duration: 3 weeks
 
 * Deliverables: (draft)
   1. An automated build and test process of the rust library artifact using Github Actions;
@@ -54,16 +62,15 @@ A public folder that can be accessed through HTTP and is compatible with wallets
   3. The entire codebase under a permissive MIT open-source license;
   4. A readme file that explains the project;
 
-An example game that demonstrates the functionality of the first milestone.
 <!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
-* Funds request (USD) for milestone 2: $8,000 USD
+* Funds request (USD) for milestone 2: $3,938 USD
 
 ## Total funds requested
 
-### $16,000 USD
+### $11,813 USD
 
 <!--
 Use of funds (specific breakdown):
@@ -79,15 +86,11 @@ Use of funds (specific breakdown):
 
 <!-- ordem alfabetica -->
 <!--*[person 1]*-->
-*Bruno Ochotorena*
+*Calindra*
 
-Web3 Developer
-LinkedIn: [/in/sandhilt](https://www.linkedin.com/in/sandhilt)
+Calindra helps our partners to execute their digital strategy through a experienced and talented team.
 
-*Fabio Oshiro*
-
-Web3 Specialist
-LinkedIn: [/in/fabiooshiro](https://www.linkedin.com/in/fabiooshiro)
+[Calindra Team](https://calindra.tech/team.html)
 
 Contributions to the Cartesi community:
 
