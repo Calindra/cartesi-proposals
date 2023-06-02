@@ -35,13 +35,17 @@ This project aims to add tooling to build DApps on Cartesi, and this is why it m
 
 ![Diagram](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_prng_5-drand-v2.png?raw=true)
 
-Bob starts a new random number process by sending a specific input to the Cartesi Rollups. This input will be recognized by the Convenience Middleware inside the Cartesi Machine and stored until Drand’s beacon arrives. The Convenience API will inspect the Cartesi Machine periodically to see if there is any input stored waiting for a beacon. When the Convenience API detects an awaiting input, it will request the latest beacon from the Drand network and send this beacon to the Cartesi Rollups.
+Bob initiates a new random number process by sending an input to the Cartesi Rollups. The frontend is unaware of whether the DApp backend inside the Cartesi Machine will require a random number. As needed, the DApp backend will request a random number from the Random Server. The Random Server will then signal the Convenience Middleware to hold all subsequent inputs until the beacon arrives.
 
-The Convenience Middleware will calculate the beacon’s creation time by discounting a safe amount of seconds to prevent any user’s prior knowledge of the beacon. With that safe time, it will load the pending inputs sent before that timestamp and add a seed property to the input metadata. Finally, the DApp will receive the input with the seed metadata to generate a random number.
+The Convenience API will periodically inspect the Cartesi Machine to check if there are any inputs awaiting a beacon. When the Convenience API detects an input waiting for a random number, it will request the latest beacon from the Drand network and send it to the Cartesi Rollups.
 
-When an input requesting a random number arrives, it will force any subsequent input (that needs or does not need a random number) to be stored until the next Drand’s beacon arrives. This rule is to maintain the correct sequence of input execution.
+The Convenience Middleware will calculate the creation time of the beacon by subtracting a safe amount of seconds to prevent any prior knowledge of the beacon by the user. Within this safe time, it will load the pending inputs sent before that timestamp and add a seed property to the input metadata. Finally, the DApp will receive the input with the seed metadata to generate a random number.
+
+When an input backend execution requesting a random number arrives, it will force any subsequent inputs (whether they require a random number or not) to be stored until the next Drand beacon arrives. This rule ensures the correct sequence of input execution.
 
 We know that the user’s DApp calls the rollup server, we change the arrow direction to make the problem easier to think about. In reality, DApps will call our middleware and our middleware will call the rollup server.
+
+The DApp's owner can run an instance of the Convenience API to provide this random number functionality.
 
 ## Milestones
 
