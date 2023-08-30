@@ -2,13 +2,13 @@
 
 **Cartesi & Syscoin Data Availability**
 
-This project is a Proof of Concept to run the Cartesi technology over Syscoin DA solution.
+Combining the computational power of Cartesi and the data availability (DA) of Syscoin, to leverage the benefits of both platforms.
 
 **Project Description**
 <!-- [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
 -->
 
-This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s network-enhanced virtual machine (NEVM), enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. This PoC will fetch and validate raw data from Syscoin DA solution and process it using Pandas.
+This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s network-enhanced virtual machine (NEVM), enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. This Prof of Concept will fetch and validate raw data from Syscoin DA solution and process it using Pandas inside the Cartesi Machine.
 
 ![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_1.png?raw=true)
 
