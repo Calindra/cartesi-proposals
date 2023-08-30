@@ -4,11 +4,15 @@
 
 Combining the computational power of Cartesi and the data availability (DA) of Syscoin, to leverage the benefits of both platforms.
 
+**What is Syscoin?**
+
+Syscoin is a full-stack modular Proof-of-Work blockchain solution merge-mined with Bitcoin. At its base is a dual-chain Layer 1: the core is the Syscoin native (UTXO) blockchain network providing Data Availability and Finality, and running in tandem with it is an Ethereum Virtual Machine (EVM) chain called NEVM (Network-Enhanced Virtual Machine) which provides Ethereum equivalence while inheriting enhanced security from the native chain and providing scalability through rollups.
+
 **Project Description**
 <!-- [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
 -->
 
-This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s network-enhanced virtual machine (NEVM), enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. This Prof of Concept will fetch and validate raw data from Syscoin DA solution and process it using Pandas inside the Cartesi Machine.
+This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s NEVM, enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. This Prof of Concept will fetch and validate raw data from Syscoin DA solution and process it using Pandas inside the Cartesi Machine.
 
 ![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_1.png?raw=true)
 
