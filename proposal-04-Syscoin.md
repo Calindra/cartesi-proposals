@@ -1,14 +1,22 @@
 ## New Proposal
 
-**Cartesi over Syscoin**
+**Cartesi & Syscoin Data Availability**
 
-This project is a Proof of Concept to run the Cartesi technology over Syscoin solution.
+This project is a Proof of Concept to run the Cartesi technology over Syscoin DA solution.
 
 **Project Description**
 <!-- [Write the description long-form here, or else paste a [google drive link](https://url/) to a slide deck]
 -->
 
-This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s network-enhanced virtual machine (NEVM), enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools.
+This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s network-enhanced virtual machine (NEVM), enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. This PoC will fetch and validate raw data from Syscoin DA solution and process it using Pandas.
+
+![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_1.png?raw=true)
+
+The two components in green will be designed to be reusable for other DApps and be transformed into Cartesi’s plugins. One has the responsibility to fetch the data, and the other is responsible for validating the data and opening a dispute when the raw data diverges. As you can see in the image above, in the future we plan to add FileCoin support as well.
+
+**The DApp**
+
+As end user developers, we will incorporate Pandas into our proof of concept. We will use the plugin (described above) to fetch the raw data and then use Pandas to extract an average number from it. In the end, we will send a notice with the calculated result to the Cartesi’s Rollups.
 
 **Value proposition**
 <!-- [Why would someone use this product/service? Or how does it add value to the Cartesi ecosystem or tech stack?]
