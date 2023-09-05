@@ -45,46 +45,53 @@ In summary, we are using Cartesi specifically because it enables us to create sc
 ## Milestones
 
 **Milestone 1: Base Contract Deployment**
+<!--
+Realmente a gente que deveria fazer esse deploy?
+existe algum privilégio do owner do contrato?
+-->
+We will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-contracts) on the [Tanenbaum testnet](https://faucet.tanenbaum.io).
 
-Some description
-
-* Duration: X weeks
+* Duration: 3 weeks
 
 * Deliverables:
-  1. Some item
-  2. Other item
+  1. Rollups Contracts deployed
 
 <!-- 
 [what will be produced, accomplished, or demonstrated by the end of this period?]
 -->
 
-* Funds request (USD) for milestone 1: $X USD
+* Funds request (USD) for milestone 1: $3,937 USD
 
 **Milestone 2: Syscoin Data Availability (DA) Plugin**
 
-* Duration: X weeks
+* Duration: 9 weeks
 
 * Deliverables:
-  1. Some item
-  2. Other item
+  1. Fetch Plugin
+  2. Arbitration Plugin
+  3. FS Client
+  4. An automated build and test process of the library artifact using Github Actions;
+  5. The entire codebase under a permissive MIT open-source license;
+  6. A readme file that explains the project;
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 
-* Funds request (USD) for milestone 2: $X USD
+* Funds request (USD) for milestone 2: $11,812 USD
 
 **Milestone 3: Pandas experiment**
 
-* Duration: X weeks
+* Duration: 6 weeks
 
 <!--[what will be produced, accomplished, or demonstrated by the end of this period?]-->
 * Deliverables:
-  1. Some item
-  2. Other item
+  1. An automated build and test process of the DApp using Github Actions;
+  2. The entire codebase under a permissive MIT open-source license;
+  3. A readme file that explains the project;
 
-* Funds request (USD) for milestone 3: $X USD
+* Funds request (USD) for milestone 6: $7,875 USD
 
 ## Total funds requested
 
-### $X USD
+### $23,624 USD
 
 <!--
 Use of funds (specific breakdown):
