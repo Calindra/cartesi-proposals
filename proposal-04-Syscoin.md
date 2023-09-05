@@ -14,9 +14,8 @@ Syscoin is a full-stack modular Proof-of-Work blockchain solution merge-mined wi
 
 This project aims to demonstrate the feasibility and potential of integrating Cartesi’s layer-2 solution with Syscoin’s NEVM, enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. This Prof of Concept will fetch and validate raw data from Syscoin DA solution and process it using Pandas inside the Cartesi Machine.
 
-![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_1.png?raw=true)
-
-The two components in green will be designed to be reusable for other DApps and be transformed into Cartesi’s plugins. One has the responsibility to fetch the data, and the other is responsible for validating the data and opening a dispute when the raw data diverges. As you can see in the image above, in the future we plan to add FileCoin support as well.
+![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_2.png?raw=true)
+The two components in green will be designed to be reusable for other DApps and be transformed into Cartesi’s plugins. One has the responsibility to fetch the data, and the Arbitration is responsible for validating the data and opening a dispute when the raw data diverges. As you can see in the image above, in the future we plan to add FileCoin support as well.
 
 **The DApp**
 
