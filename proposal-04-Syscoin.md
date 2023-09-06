@@ -44,7 +44,7 @@ In summary, we are using Cartesi specifically because it enables us to create sc
 
 ## Milestones
 
-**Milestone 1: Base Contract Deployment**
+**Milestone 1: Base Contract Deployment (Draft)**
 <!--
 Realmente a gente que deveria fazer esse deploy?
 existe algum privilégio do owner do contrato?
@@ -62,7 +62,7 @@ We will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-co
 
 * Funds request (USD) for milestone 1: $3,937 USD
 
-**Milestone 2: Syscoin Data Availability (DA) Plugin**
+**Milestone 2: Syscoin Data Availability (DA) Plugin (Draft)**
 
 * Duration: 9 weeks
 
@@ -77,7 +77,7 @@ We will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-co
 
 * Funds request (USD) for milestone 2: $11,812 USD
 
-**Milestone 3: Pandas experiment**
+**Milestone 3: Pandas experiment (Draft)**
 
 * Duration: 6 weeks
 
