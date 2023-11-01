@@ -1,5 +1,7 @@
 Draft:
 
+![Alt text](images/cartesi_proposal_Syscoin_Draft.png)
+
 1. Bob sends the data to Syscoin DA:
 ```json
 {
