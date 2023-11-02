@@ -71,28 +71,15 @@ The chunk size is 10 characters to simplify.
     "hash": "SyscoinHash"
 }
 ```
-Merkle Tree Algorithm modified:
-```rs
-let syscoin_hash = "SyscoinHash"
-let hash_leaf_0_0 = hash(syscoin_hash, "Leaf00Data");
-let hash_leaf_0_1 = hash(syscoin_hash, "Leaf01Data");
-let hash_leaf_1_0 = hash(syscoin_hash, "Leaf10Data");
-let hash_leaf_1_1 = hash(syscoin_hash, "Leaf11Data");
-let hash_0 = hash(syscoin_hash, hash_leaf_0_0, hash_leaf_0_1);
-let hash_1 = hash(syscoin_hash, hash_leaf_1_0, hash_leaf_1_1);
-let root_hash = hash(syscoin_hash, hash_0, hash_1);
-```
-By making the hash this way, we don't need to send the merkle tree path to the leaf in the arbitration process.
-
 5. Bob checks the hash `SyscoinHash` and the `merkleTree`.
-5. Bob sends the instruction to the `Data Availability Contract` + M.T.R.H.
-6. The `Data Availability Contract` verifies the data availability (6 hours).
-7. The `Data Availability Contract` sends the parameters to `InputBox`.
-8. The `DApp` requests the data from the `DataReader`.
-9. The `DataReader` calls any `DataProviders` to fulfill the request.
-10. The `MerkleValidator` checks the `SyscoinHash`.
-11. The `MerkleValidator` checks the path of the merkle tree against the leaf data.
-12. The `DataReader` returns the verified data to `DApp`.
+6. Bob sends the instruction to the `Data Availability Contract` + M.T.R.H.
+7. The `Data Availability Contract` verifies the data availability (6 hours).
+8. The `Data Availability Contract` sends the parameters to `InputBox`.
+9. The `DApp` requests the data from the `DataReader`.
+10. The `DataReader` calls any `DataProviders` to fulfill the request.
+11. The `MerkleValidator` checks the `SyscoinHash`.
+12. The `MerkleValidator` checks the path of the merkle tree against the leaf data.
+13. The `DataReader` returns the verified data to `DApp`.
 
 Everything will be computed inside the Cartesi Machine.
 
@@ -106,3 +93,16 @@ function isOk(leafHash, syscoinHash, leafData) {
 If the `SyscoinHash` does not match the full data, the current process of Cartesi can handle the problem.
 
 If any path of the merkle tree is wrong, the current process of Cartesi will handle the problem.
+
+[1] Merkle Tree Algorithm modified:
+```rs
+let syscoin_hash = "SyscoinHash"
+let hash_leaf_0_0 = hash(syscoin_hash, "Leaf00Data");
+let hash_leaf_0_1 = hash(syscoin_hash, "Leaf01Data");
+let hash_leaf_1_0 = hash(syscoin_hash, "Leaf10Data");
+let hash_leaf_1_1 = hash(syscoin_hash, "Leaf11Data");
+let hash_0 = hash(syscoin_hash, hash_leaf_0_0, hash_leaf_0_1);
+let hash_1 = hash(syscoin_hash, hash_leaf_1_0, hash_leaf_1_1);
+let root_hash = hash(syscoin_hash, hash_0, hash_1);
+```
+By making the hash this way, we don't need to send the merkle tree path to the leaf in the arbitration process.
