@@ -83,12 +83,7 @@ The chunk size is 10 characters to simplify.
 
 Everything will be computed inside the Cartesi Machine.
 
-If any part of the data is wrong, Alice should send the merkle tree leaf hash, the Syscoin's hash and the data to L1 `Data Chunk Arbitrage` to do the arbitration process.
-```js
-function isOk(leafHash, syscoinHash, leafData) {
-    return leafHash == hash(syscoinHash, leafData)
-}
-```
+If any part of the data is wrong, Alice should send the merkle tree path to the leaf hash, the Syscoin's hash and the data chunk to L1 `Data Chunk Arbitrage` to do the arbitration process.
 
 If the `SyscoinHash` does not match the full data, the current process of Cartesi can handle the problem.
 
@@ -105,4 +100,3 @@ let hash_0 = hash(syscoin_hash, hash_leaf_0_0, hash_leaf_0_1);
 let hash_1 = hash(syscoin_hash, hash_leaf_1_0, hash_leaf_1_1);
 let root_hash = hash(syscoin_hash, hash_0, hash_1);
 ```
-By making the hash this way, we don't need to send the merkle tree path to the leaf in the arbitration process.
