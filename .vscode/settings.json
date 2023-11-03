@@ -4,6 +4,7 @@
         "Cartesi",
         "Drand",
         "merkle",
+        "MTRH",
         "NEVM",
         "Rollups",
         "syscoin",

@@ -83,7 +83,9 @@ The chunk size is 10 characters to simplify.
 
 Everything will be computed inside the Cartesi Machine.
 
-If any part of the data is wrong, Alice should send the merkle tree path to the leaf hash, the Syscoin's hash and the data chunk to L1 `Data Chunk Arbitrage` to do the arbitration process.
+If any part of the data is wrong, Alice should send the hashes to validate the merkle tree path to the leaf hash, the Syscoin's hash and the data chunk to L1 `Data Chunk Arbitrage` to do the arbitration process.
+
+![Alt text](image.png)
 
 If the `SyscoinHash` does not match the full data, the current process of Cartesi can handle the problem.
 
@@ -99,4 +101,20 @@ let hash_leaf_1_1 = hash(syscoin_hash, "Leaf11Data");
 let hash_0 = hash(syscoin_hash, hash_leaf_0_0, hash_leaf_0_1);
 let hash_1 = hash(syscoin_hash, hash_leaf_1_0, hash_leaf_1_1);
 let root_hash = hash(syscoin_hash, hash_0, hash_1);
+```
+
+### Scenario 1
+
+Chuck fetches the data, validates the data, and performs an operation with 1 bit flipped.
+
+```js
+let data = fetch(hash) // Chuck and Alice disagree -> no way to tell who is correct
+validate(data, hash)   // Chuck and Alice disagree -> here the CM process will handle the problem
+let res = 2 * data[0]  // Chuck and Alice disagree
+```
+
+```js
+let data = fetch(hash) // Chuck and Alice agree
+validate(data, hash)   // Chuck and Alice agree
+let res = 2 * data[0]  // Chuck and Alice disagree -> here the CM process will handle the problem
 ```
