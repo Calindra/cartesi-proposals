@@ -87,7 +87,8 @@ If any part of the data is wrong, Alice should send the hashes to validate the m
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
 flowchart TB;
-    classDef default stroke-width:2px,stroke:#000,fill:white;
+    classDef default stroke-width:2px,stroke:#000;
+    classDef green,red color:#000
     classDef green fill:#cef6d5;
     classDef red fill:#fedfdd;
 
