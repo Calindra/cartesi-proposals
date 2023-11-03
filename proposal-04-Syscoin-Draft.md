@@ -88,9 +88,8 @@ If any part of the data is wrong, Alice should send the hashes to validate the m
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
 flowchart TB;
     classDef default stroke-width:2px,stroke:#000;
-    classDef green,red color:#000
-    classDef green fill:#cef6d5;
-    classDef red fill:#fedfdd;
+    classDef green fill:#cef6d5,color:#000;
+    classDef red fill:#fedfdd,color:#000;
 
     A([root_hash]):::green -->B([hash_0]):::green
     A-->C([hash_1]):::red;
