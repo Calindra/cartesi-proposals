@@ -5,7 +5,6 @@ Draft:
 ```mermaid
 %%{
   init: {
-    "theme": "dark",
     "sequence": {
       "mirrorActors": true,
       "messageAlign": "center"
@@ -85,7 +84,25 @@ Everything will be computed inside the Cartesi Machine.
 
 If any part of the data is wrong, Alice should send the hashes to validate the merkle tree path to the leaf hash, the Syscoin's hash and the data chunk to L1 `Data Chunk Arbitrage` to do the arbitration process.
 
-![Alt text](image.png)
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart TB;
+    classDef default stroke-width:2px,stroke:#000,fill:white;
+    classDef green fill:#cef6d5;
+    classDef red fill:#fedfdd;
+
+    A([root_hash]):::green -->B([hash_0]):::green
+    A-->C([hash_1]):::red;
+    B-->E([hash\nleaf 0_0]):::green
+    B-->F([hash\nleaf 0_1]):::red
+    C-->H([hash\nleaf 1_0])
+    C-->I([hash\nleaf 1_1])
+    
+    E-->J([Lef00Data]):::red
+    F-->K([Lef01Data])
+    H-->L([Lef10Data])
+    I-->M([Lef11Data])
+```
 
 If the `SyscoinHash` does not match the full data, the current process of Cartesi can handle the problem.
 
