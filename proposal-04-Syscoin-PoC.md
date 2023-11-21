@@ -20,9 +20,15 @@ In summary, by combining Cartesi and Syscoin, we can leverage the best of both w
 
 **Technical details**
 <!--[Provide a technical description here, and please use images and diagrams to support it.] -->
-First, we will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-contracts) on the [Tanenbaum testnet](https://faucet.tanenbaum.io) to run inside the Syscoin's NEVM.
-![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_2.png?raw=true)  
-After the basic **Cartesi Rollups** functionality is up and running, we will develop the three components in green. They are designed to be reusable for other DApps and can be transformed into Cartesi’s plugins. The first one, the **Fetch** component, is responsible for retrieving the data, and the **Arbitration** component is responsible for validating the data and opening a dispute when the raw data diverges. Finally, we will provide an **FS Client** to simplify the data requests, driver mountings, and so on. As shown in the image above, we also plan to add **Filecoin** support in the future.
+![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_3.png?raw=true)  
+
+1. We will create a client called Web3DAClient to simplify the process of uploading data to the Syscoin DA solution and sending the hash to InputBox through DAContract.
+
+2. We will develop the SyscoinFetcher component to fetch the data from Syscoin given a hash.
+
+3. We will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-contracts) on the [Tanenbaum testnet](https://faucet.tanenbaum.io) to run inside Syscoin's NEVM.
+
+4. Inside Cartesi's solution, we will develop an integration with the Dispatcher component.
 
 **Value Proposition**
 <!--[How does this POC provide value to the Cartesi developer ecosystem or core technology? Why would the community or other developers be interested in its successful execution?]-->
