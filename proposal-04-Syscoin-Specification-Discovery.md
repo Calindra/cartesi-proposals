@@ -21,13 +21,11 @@ In summary, by combining Cartesi and Syscoin, we can leverage the best of both w
 **Technical details**
 <!--[Provide a technical description here, and please use images and diagrams to support it.] -->
 ![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_3.png?raw=true)  
+We will create a technical specification for:
 
-1. We will create a specification for a client called Web3DAClient to simplify the process of uploading data to the Syscoin DA solution and sending the hash to InputBox through DAContract.
-
-2. We will specify the SyscoinFetcher component to fetch the data from Syscoin given a hash.
-
-3. We will specify a smart contract, DAContract, will be specified to validate data availability, providing protection to InputBox against malicious attacks.
-
+1. A client called Web3DAClient to simplify the process of uploading data to the Syscoin DA solution and sending the hash to InputBox through DAContract.
+2. The SyscoinFetcher component to fetch the data from Syscoin given a hash.
+3. A smart contract, DAContract, will be specified to validate data availability, providing protection to InputBox against malicious attacks.
 4. Inside Cartesi's solution, we will specify an integration with the Dispatcher component to transmit the fetched data to the ServerManager. This way, the DApp will receive the data within the input payload.
 
 All ideas are subject to change during the discovery process.  
@@ -39,7 +37,7 @@ This product/service leverages the computational power of Cartesi's layer-2 solu
 
 **Estimated Duration and Funds Requested**
 Duration: [x weeks/months]
-Funds request (USD) for the POC: [$x USD]
+Funds request (USD): [$x USD]
 
 **Subsequent Vision and Extensibility**
 <!--[If the POC proves to be successful, what potential does it hold for a full-scale project or product? Share a brief vision of what a larger project would look like. Additionally, describe the next steps or features that should be implemented immediately following a successful proof of concept that extend the POC's functionality.] -->
@@ -52,10 +50,10 @@ In the future, we plan to add **Filecoin** support to our solution, which will e
 The three main components could be reused by other DApps to handle large and complex datasets that require advanced analysis and processing. It can also ensure the security and reliability of the data retrieval service. Some other potential uses for our solution are:
 
 - **Data science**: Everyone can use our solution to perform data science tasks, such as data cleaning, exploration, visualization, modeling, and evaluation. You can use any library or package that is available for Linux, such as Pandas.
-- **Machine learning**: Everyone can use our POC to train and deploy machine learning models, such as classification, regression, clustering, and reinforcement learning. You can use any framework or tool that is compatible with Linux, such as Keras, PyTorch, FastAI, and Ray.
-- **Artificial intelligence**: Everyone can use our POC to create and run artificial intelligence applications, such as natural language processing, computer vision, speech recognition, and generative adversarial networks. You can use any library or package that supports Linux, such as NLTK, SpaCy, OpenCV, and PyTorch.
+- **Machine learning**: Everyone can use our solution to train and deploy machine learning models, such as classification, regression, clustering, and reinforcement learning. You can use any framework or tool that is compatible with Linux, such as Keras, PyTorch, FastAI, and Ray.
+- **Artificial intelligence**: Everyone can use our solution to create and run artificial intelligence applications, such as natural language processing, computer vision, speech recognition, and generative adversarial networks. You can use any library or package that supports Linux, such as NLTK, SpaCy, OpenCV, and PyTorch.
 
-These are just some of the examples of how you can use your POC for other purposes. There are many more possibilities and opportunities that you can explore.
+These are just some of the examples of how you can use your solution for other purposes. There are many more possibilities and opportunities that you can explore.
 
 **Risks and Contingency Plans**
 <!--[What are the potential challenges or risks for this POC? If things don't go according to plan, how will you you know? How will you pivot or adjust your approach?]-->
