@@ -20,24 +20,57 @@ In summary, by combining Cartesi and Syscoin, we can leverage the best of both w
 
 **Technical details**
 <!--[Provide a technical description here, and please use images and diagrams to support it.] -->
-![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_3.png?raw=true)  
-We will create a technical specification for:
 
-1. A client called Web3DAClient to simplify the process of uploading data to the Syscoin DA solution and sending the hash to InputBox through DAContract.
-2. The SyscoinFetcher component to fetch the data from Syscoin given a hash.
-3. A smart contract, DAContract, will be specified to validate data availability, providing protection to InputBox against malicious attacks.
-4. Inside Cartesi's solution, we will specify an integration with the Dispatcher component to transmit the fetched data to the ServerManager. This way, the DApp will receive the data within the input payload.
+<!-- ini introduction -->
 
-All ideas are subject to change during the discovery process.  
-All changes and the reasons for them will be included in the final report.
+We will develop a technical specification and implement prototypes in iterative cycles to validate our hypotheses. At the conclusion of each cycle, we will compile a report outlining the results, whether they indicate success or failure.
+
+In this proposal, for example, we aim to investigate both Pull and Push strategies for data ingestion using Syscoin and Cartesi solutions.
+
+Our exploration will progress from simpler approaches to more complex ones, like in the data arbitration model:
+
+1. Authority
+2. Quorum (committee)
+3. Dave (we will explain)
+
+The topics below will not be executed in that order.
+<!-- end introduction -->
+
+Exploration Topics
+
+-> Data ingestion strategy
+- Push strategy
+- Pull strategy
+
+-> zk 
+- risc0
+- stark -> snark (vale a pena?)
+- MTRH prof of eq Syscoin's Hash (512 folhas por 2mb)
+
+-> Syscoin exploration
+Basic Components  
+1. Web3DAClient
+2. SyscoinFetcher
+3. DAContract
+
+-> Arbitration
+- podemos fazer uma arbitragem com a CM?
+
+-> Cartesi Integration  
+    How to exchange the data between the components? IO.
+
+-> Dave Arbitration
+
+Inspired by the biblical David versus Goliath, the Dave Arbitration approach symbolizes the capability of a smaller computing entity to win a challenge against a larger counterpart. In this context, a single node has the capacity to validate the accuracy of data in contrast to a cluster of nodes. This arbitration methodology underscores the correctness of smaller computing resources in decentralized validation processes.
 
 **Value Proposition**
 <!--[How does this POC provide value to the Cartesi developer ecosystem or core technology? Why would the community or other developers be interested in its successful execution?]-->
 This product/service leverages the computational power of Cartesi's layer-2 solution to process and analyze the big data that is accessible and retrievable from Syscoin’s network-enhanced virtual machine (NEVM), enabling developers to create scalable, secure, and decentralized applications using mainstream software stacks and tools. By integrating Cartesi with Syscoin, this product/service offers fast, low-cost, and interoperable transactions, as well as Ethereum-compatible smart contracts and decentralized applications. Moreover, by using PoDA protocol, this product/service ensures that the data needed to verify the off-chain computation is available to anyone who wants to verify it, without requiring the full data to be stored on the blockchain. This product/service also ensures the data availability of the blockchain itself, by using various methods to prevent data withholding attacks.
 
 **Estimated Duration and Funds Requested**
-Duration: [x weeks/months]
-Funds request (USD): [$x USD]
+
+Duration: 3 months  
+Funds request (USD): $15750 USD  
 
 **Subsequent Vision and Extensibility**
 <!--[If the POC proves to be successful, what potential does it hold for a full-scale project or product? Share a brief vision of what a larger project would look like. Additionally, describe the next steps or features that should be implemented immediately following a successful proof of concept that extend the POC's functionality.] -->
