@@ -73,7 +73,7 @@ The chunk size is 10 characters to simplify.
 ```
 5. Bob checks the hash `SyscoinHash` and the `merkleTree`.
 6. Bob sends the instruction to the `Data Availability Contract` + M.T.R.H.
-7. The `Data Availability Contract` verifies the data availability (6 hours).
+7. The `Data Availability Contract` verifies the data availability (5 hours).
 8. The `Data Availability Contract` sends the parameters to `InputBox`.
 9. The `DApp` requests the data from the `DataReader`.
 10. The `DataReader` calls any `DataProviders` to fulfill the request.
@@ -85,7 +85,7 @@ Everything will be computed inside the Cartesi Machine.
 
 If any part of the data is wrong, Alice should send the hashes to validate the merkle tree path to the leaf hash, the Syscoin's hash and the data chunk to L1 `Data Chunk Arbitrage` to do the arbitration process.
 
-![Alt text](image.png)
+![Alt text](images/cartesi_proposal_Syscoin_Draft_merkle_tree.png)
 
 If the `SyscoinHash` does not match the full data, the current process of Cartesi can handle the problem.
 
@@ -118,3 +118,45 @@ let data = fetch(hash) // Chuck and Alice agree
 validate(data, hash)   // Chuck and Alice agree
 let res = 2 * data[0]  // Chuck and Alice disagree -> here the CM process will handle the problem
 ```
+
+### 2023-11-03
+
+1. Full data or chunks?
+
+2. We need the same algorithm and the same chunk size...
+
+3. A separated CM could calculate the MTRH and emit one voucher to the L1.
+The data from Syscoin will be mounted on the initial Drive.
+We need to wait the dispute epoch...
+The epoch should be less than the Syscoin DA.
+
+A reference program
+
+4. zk to proof the Syscoin hash is equivalent to the MTRH.
+Send the proof to SmartContractProxy that Syscoin hash belongs to this MTRH.
+The Verifier will receive the proof and the assertion that the hash eq MTRH.
+zk-SNARK
+
+zk-STARK the proof is bigger
+
+-> The Plonk is a kind of zk-SNARK.
+-> Take a look on Risk Zero...
+-> Circom
+https://betterprogramming.pub/zero-knowledge-proofs-using-snarkjs-and-circom-fac6c4d63202
+
+-> noir aztec
+
+
+A -> B -> X -> Y
+
+A is the initial state, when we receive the input with the DA
+  100k instructions
+B is the fetch
+  1 instruction
+(mount the driver with the data)
+
+X is the state after the fetched data and the driver mounted
+  200k instructions
+Y is the DApp processing the data
+
+split the data to calc the zk in parallel
