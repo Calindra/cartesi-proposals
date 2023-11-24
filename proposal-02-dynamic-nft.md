@@ -13,7 +13,7 @@ The main challenge of this project is to enable the creation and updating of dyn
 
 To overcome this challenge, We propose to create a public folder inside the Cartesi Machine that can store and update the images and metadata of the dynamic NFTs. The public folder would allow developers and users to access and modify the files on the Cartesi Machine. The public folder would also enable collaborative applications that require multiple parties to access the same files.
 
-The main benefit of this project is that it would enable the creation of dynamic NFTs that are fully decentralized and transparent. The dynamic NFTs would not rely on any off-chain services or data sources to change their characteristics. The dynamic NFTs would also be verifiable by anyone who can inspect the state of the Cartesi Machine.
+The main benefit of this project is that it would enable the creation of dynamic NFTs that are fully decentralized and transparent. The dynamic NFTs would not rely on any fully off-chain services or data sources to change their characteristics. The dynamic NFTs would also be verifiable by anyone who can inspect the state of the Cartesi Machine.
 
 **Value proposition**
 <!-- [Why would someone use this product/service? Or how does it add value to the Cartesi ecosystem or tech stack?]-->

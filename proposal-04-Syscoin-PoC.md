@@ -20,9 +20,15 @@ In summary, by combining Cartesi and Syscoin, we can leverage the best of both w
 
 **Technical details**
 <!--[Provide a technical description here, and please use images and diagrams to support it.] -->
-First, we will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-contracts) on the [Tanenbaum testnet](https://faucet.tanenbaum.io) to run inside the Syscoin's NEVM.
-![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_2.png?raw=true)  
-After the basic **Cartesi Rollups** functionality is up and running, we will develop the three components in green. They are designed to be reusable for other DApps and can be transformed into Cartesi’s plugins. The first one, the **Fetch** component, is responsible for retrieving the data, and the **Arbitration** component is responsible for validating the data and opening a dispute when the raw data diverges. Finally, we will provide an **FS Client** to simplify the data requests, driver mountings, and so on. As shown in the image above, we also plan to add **Filecoin** support in the future.
+![Cartesi and Syscoin](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesi_proposal_Syscoin_3.png?raw=true)  
+
+1. We will create a client called Web3DAClient to simplify the process of uploading data to the Syscoin DA solution and sending the hash to InputBox through DAContract.
+
+2. We will develop the SyscoinFetcher component to fetch the data from Syscoin given a hash.
+
+3. We will deploy all the [Rollups Contracts](https://github.com/cartesi/rollups-contracts) on the [Tanenbaum testnet](https://faucet.tanenbaum.io) to run inside Syscoin's NEVM.
+
+4. Inside Cartesi's solution, we will develop an integration with the Dispatcher component to transmit the fetched data to the ServerManager. This way, the DApp will receive the data within the input payload.
 
 **Value Proposition**
 <!--[How does this POC provide value to the Cartesi developer ecosystem or core technology? Why would the community or other developers be interested in its successful execution?]-->
@@ -35,13 +41,7 @@ Funds request (USD) for the POC: [$x USD]
 **Subsequent Vision and Extensibility**
 <!--[If the POC proves to be successful, what potential does it hold for a full-scale project or product? Share a brief vision of what a larger project would look like. Additionally, describe the next steps or features that should be implemented immediately following a successful proof of concept that extend the POC's functionality.] -->
 
-In the future, we plan to add **Filecoin** support to our solution, which will enable us to leverage a decentralized storage network over **IPFS**. Filecoin is an open-source, public cryptocurrency and digital payment system that allows users to rent unused hard drive space. By integrating Filecoin with our solution, we will be able to offer more data storage options, as well as enhance the security and reliability of our data retrieval service. Our vision is to create a scalable and flexible DApp that can handle real-life and complex use cases using **Cartesi Rollups**, which have a powerful rollups technology with a Linux runtime. Cartesi Rollups allow us to move the bulk of the computation outside the blockchain, using any ledger as a data source but not as an execution environment. This way, we can overcome the scalability limitations of the Ethereum Virtual Machine (EVM) and use any package or library that is available for Linux (like Pandas). The next steps or features that we would implement after a successful proof of concept are:
-
-- Developing a **Filecoin Fetch** component that is responsible for retrieving the data from Filecoin IPFS.
-- Developing a **Filecoin Arbitration** component that is responsible for validating the data and opening a dispute when the raw data diverges.
-- Developing a **Filecoin FS Client** that simplifies the data requests, driver mountings, and so on.
-- Testing and optimizing our DApp's performance, security, and usability.
-
+In the future, we plan to add **Filecoin** support to our solution, which will enable us to leverage a decentralized storage network over **IPFS**. Filecoin is an open-source, public cryptocurrency and digital payment system that allows users to rent unused hard drive space. By integrating Filecoin with our solution, we will be able to offer more data storage options, as well as enhance the security and reliability of our data retrieval service. Our vision is to create a scalable and flexible DApp that can handle real-life and complex use cases using **Cartesi Rollups**, which have a powerful rollups technology with a Linux runtime. Cartesi Rollups allow us to move the bulk of the computation outside the blockchain, using any ledger as a data source but not as an execution environment. This way, we can overcome the scalability limitations of the Ethereum Virtual Machine (EVM) and use any package or library that is available for Linux (like Pandas).
 
 
 **Reusability and Other Use Cases**
@@ -66,7 +66,7 @@ There challenges and risks that could arise from this an integration. Some of th
 
 **Success criteria**
 <!--[What is considered success for this POC? How will you know whether the POC is finished? What deliverables will you produce to demonstrate that the POC accomplished what it set out to do?]-->
-The POC should use all three components successfully to fetch a sample of data from Syscoin’s DA and use it inside the Cartesi Machine using Pandas.
+The POC should successfully utilize all the developed components to fetch a sample of data from Syscoin’s DA and use it inside the Cartesi Machine using Pandas.
 
 **Final report**
 <!--[Upon a failure of the POC, the Grants Council may still issue prorated payment if the applicant provides a written debriefing that sufficiently details the approaches used, why they failed, and what next steps would be if someone else were to resume the project. This will be shared with the community. Do you agree to provide this? Yes/no]-->
