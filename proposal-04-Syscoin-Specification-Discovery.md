@@ -31,35 +31,38 @@ Our exploration will progress from simpler approaches to more complex ones, like
 
 1. Authority
 2. Quorum (committee)
-3. Dave (we will explain)
+3. Dave \[1\]
 
-The topics below will not be executed in that order.
+Below, we outline several topics. This does not imply a fixed exploration or execution order, it serves as a flexible guide for potential areas of investigation.
+
 <!-- end introduction -->
 
-Exploration Topics
+**Exploration Topics**
 
--> Data ingestion strategy
+**1. Data ingestion strategy**
 - Push strategy
 - Pull strategy
 
--> zk 
-- risc0
-- stark -> snark (vale a pena?)
-- MTRH prof of eq Syscoin's Hash (512 folhas por 2mb)
+**2. Zero Knowledge**
+- risc0 computational capacity
+- stark snark conversion
+- Merkle Tree eq Syscoin's Hash proof
 
--> Syscoin exploration
-Basic Components  
-1. Web3DAClient
-2. SyscoinFetcher
-3. DAContract
+**3. Syscoin integration**
+- Basic Components  
+  1. Web3DAClient
+  2. SyscoinFetcher
+  3. DAContract
 
--> Arbitration
-- podemos fazer uma arbitragem com a CM?
+**4. Arbitration**
+1. Authority
+2. Quorum (committee)
+3. Dave (we will explain)
 
--> Cartesi Integration  
-    How to exchange the data between the components? IO.
+**5. Cartesi Integration**
+- How to exchange the data between the internal CM components?
 
--> Dave Arbitration
+[1] Dave Arbitration
 
 Inspired by the biblical David versus Goliath, the Dave Arbitration approach symbolizes the capability of a smaller computing entity to win a challenge against a larger counterpart. In this context, a single node has the capacity to validate the accuracy of data in contrast to a cluster of nodes. This arbitration methodology underscores the correctness of smaller computing resources in decentralized validation processes.
 
