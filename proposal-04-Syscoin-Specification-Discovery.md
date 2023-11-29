@@ -40,24 +40,31 @@ Below, we outline several topics. This does not imply a fixed exploration or exe
 **Exploration Topics**
 
 **1. Data ingestion strategy**
-- Push strategy
-- Pull strategy
+
+What are the strategies for injecting a large dataset into the Cartesi Machine?
+- Push strategy: when the end user sends the data to the Cartesi Machine using an `advance` command
+- Pull strategy: when the DApp inside the Cartesi Machine requests data from the outside world
 
 **2. Zero Knowledge**
+
+Is it possible to use zero-knowledge proofs to prove the starting point of a Cartesi Machine for a large dataset?
 - risc0 computational capacity
 - stark snark conversion
 - Merkle Tree eq Syscoin's Hash proof
 
 **3. Syscoin integration**
-- Basic Components  
-  1. Web3DAClient
-  2. SyscoinFetcher
-  3. DAContract
+
+What are the components that need to be built for this integration?
+- Web3DAClient
+- SyscoinFetcher
+- DAContract
 
 **4. Arbitration**
+
+What is the best possible arbitration solution for blockchain data availability?
 1. Authority
 2. Quorum (committee)
-3. Dave (we will explain)
+3. Dave \[1\]
 
 **5. Cartesi Integration**
 - How to exchange the data between the internal CM components?
