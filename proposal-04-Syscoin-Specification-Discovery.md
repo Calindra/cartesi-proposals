@@ -79,8 +79,8 @@ This product/service leverages the computational power of Cartesi's layer-2 solu
 
 **Estimated Duration and Funds Requested**
 
-Duration: 3 months  
-Funds request (USD): $15750 USD  
+Duration: 7 weeks  
+Funds request (USD): $16,800 USD  
 
 **Subsequent Vision and Extensibility**
 <!--[If the POC proves to be successful, what potential does it hold for a full-scale project or product? Share a brief vision of what a larger project would look like. Additionally, describe the next steps or features that should be implemented immediately following a successful proof of concept that extend the POC's functionality.] -->
