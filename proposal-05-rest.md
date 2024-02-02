@@ -1,7 +1,16 @@
 
 # Cartesify HLF
 
-Bruno and I are focused on boosting Cartesi's adoption, especially among web2 developers. Our proposal introduces a REST abstraction layer to the current technology stack, aiming to simplify onboarding. By leveraging the familiarity developers have with RESTful architectures, we aim to facilitate seamless integration with minimal effort. This approach aligns with our goal of creating a more developer-friendly ecosystem and expanding Cartesi's reach within the broader community.
+Bruno and I are focused on growing Cartesi's adoption, especially among web2 developers. Our proposal introduces a REST abstraction layer to the current technology stack, aiming to simplify onboarding. By leveraging the familiarity developers have with RESTful architectures, we aim to facilitate the transition from web2 to web3 with minimal effort. This approach aligns with our goal of creating a more developer-friendly ecosystem and expanding Cartesi's reach within the broader community.
+
+## Statistics
+
+The latest Stack Overflow survey shows that the majority of developers are web developers.
+https://survey.stackoverflow.co/2023/#section-developer-roles-developer-type
+
+![Stackoverflow Survey 2023](https://github.com/Calindra/cartesi-proposals/blob/main/images/stackoverflow-survey-2023.png?raw=true)
+
+## Some Advantages
 
 1. **Low Learning Curve:**
    - Web2 developers are already familiar with REST APIs, making it easier for them to transition into Cartesi Rollups without a steep learning curve.
@@ -24,10 +33,5 @@ Bruno and I are focused on boosting Cartesi's adoption, especially among web2 de
 6. **Documentation and Tooling:**
    - RESTful APIs come with established standards for documentation (e.g., OpenAPI) and tooling, making it easier for developers to understand, use, and integrate Cartesi Rollups.
 
-The last Stackoverflow survey shows that the majority of our target audience are web developers
-https://survey.stackoverflow.co/2023/#section-developer-roles-developer-type
 
-## Statistics
-
-![Stackoverflow Survey 2023](https://github.com/Calindra/cartesi-proposals/blob/main/images/stackoverflow-survey-2023.png?raw=true)
 
