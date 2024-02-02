@@ -53,7 +53,40 @@ app.listen(port, () => {
 
 The frontend code to make an HTTP POST request to the backend using Cartesify will be:
 ```ts
-Cartesify.axios.post("/hit", { foo: "bar" })
+const handleHit = async () => {
+    const res = await Cartesify.axios.post("/hit", { amount: 1234 });
+    console.log(res.data);
+}
 ```
+When triggered, the code above will print `{"amount": 1234}` in the console.
+
+## Tech details
 
 ![Cartesi Tech Diagram](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesify-diagram.png?raw=true)
+
+All the REST verbs that make changes to the state (POST, PUT, PATCH, DELETE) will be signed by the private key, possibly using a wallet like MetaMask, and will be implemented using the `advance` command. The GET operation will be implemented using the `inspect` command.
+
+As a web2 developer, we will achieve battle-proof authentication by adding the `msg_sender` to the request headers.
+
+```js
+// express code
+app.post('/hit', (req, res) => {
+    const msgSender = req.get('x-msg_sender');
+    res.send({ amount: req.body.amount });
+});
+```
+
+Additionally, web2 developers will benefit from an atomic operation. If the endpoint returns an error, such as a 4xx or 5xx status code, we will send a `reject` that performs a rollback operation, thanks to the Cartesi technology as pointed out by @gabrielbarros.
+
+### Deposit
+
+We will set up a protected webhook by convention, pointing to /webhooks/deposits, which can be configurable.
+
+```json
+{
+    "success": true,
+    "erc20": "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
+    "depositor": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "amount": "100",
+}
+```
