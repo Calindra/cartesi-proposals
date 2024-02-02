@@ -1,7 +1,6 @@
-
 # Cartesify HLF
 
-Bruno and I are focused on growing Cartesi's adoption, especially among web2 developers. Our proposal introduces a REST abstraction layer to the current technology stack, aiming to simplify onboarding. By leveraging the familiarity developers have with RESTful architectures, we aim to facilitate the transition from web2 to web3 with minimal effort. This approach aligns with our goal of creating a more developer-friendly ecosystem and expanding Cartesi's reach within the broader community.
+Bruno and I are focused on growing Cartesi's adoption, especially among web2 developers. Our proposal introduces a REST abstraction layer to the current technology stack, aiming to simplify onboarding. By taking advantage of the familiarity developers have with RESTful architectures, we aim to facilitate the transition from web2 to web3 with minimal effort. This approach aligns with our goal of creating a more developer-friendly ecosystem and expanding Cartesi's reach within the broader community.
 
 ## Statistics
 
@@ -33,5 +32,26 @@ https://survey.stackoverflow.co/2023/#section-developer-roles-developer-type
 6. **Documentation and Tooling:**
    - RESTful APIs come with established standards for documentation (e.g., OpenAPI) and tooling, making it easier for developers to understand, use, and integrate Cartesi Rollups.
 
+## Example
 
+Given this minimal backend code:
+```js
+const express = require("express")
 
+const app = express();
+const port = 8383;
+app.use(express.json());
+
+app.post('/hit', (req, res) => {
+    res.send({ amount: req.body.amount });
+});
+
+app.listen(port, () => {
+    console.log(`[server]: Server is running at http://localhost:${port}`);
+});
+```
+
+The frontend code to make an HTTP POST request to the backend using Cartesify will be:
+```ts
+Cartesify.axios.post("http://localhost:8383/hit", { foo: "bar" })
+```
