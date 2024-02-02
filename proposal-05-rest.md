@@ -53,5 +53,7 @@ app.listen(port, () => {
 
 The frontend code to make an HTTP POST request to the backend using Cartesify will be:
 ```ts
-Cartesify.axios.post("http://localhost:8383/hit", { foo: "bar" })
+Cartesify.axios.post("/hit", { foo: "bar" })
 ```
+
+![Cartesi Tech Diagram](https://github.com/Calindra/cartesi-proposals/blob/main/images/cartesify-diagram.png?raw=true)
